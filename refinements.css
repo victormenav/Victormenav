@@ -14,3 +14,19 @@
 .whatsapp-fab svg{width:16px;height:16px;fill:currentColor}
 .whatsapp-fab:hover,.whatsapp-fab:focus-visible{background:#25D366;color:var(--black);transform:translateY(-2px)}
 @media(max-width:650px){.whatsapp-fab{position:static;margin-top:1rem;box-shadow:none}}
+.modal-overlay{position:fixed;inset:0;background:rgba(17,17,15,.75);display:flex;align-items:center;justify-content:center;padding:1.5rem;z-index:50}
+.modal-overlay[hidden]{display:none}
+.modal{background:var(--white);color:var(--black);max-width:640px;width:100%;padding:0;border-radius:14px;position:relative;overflow:hidden}
+.modal-grid{display:grid;grid-template-columns:.85fr 1.15fr}
+.modal-photo{width:100%;height:100%;min-height:280px;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05)}
+.modal-body{padding:2.2rem}
+.modal-close{position:absolute;top:1rem;right:1rem;background:var(--white);width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;border:0;font-size:1rem;line-height:1;cursor:pointer;color:var(--black);z-index:2}
+.modal h3{font-size:1.4rem;margin-bottom:1.4rem;font-weight:700;letter-spacing:-.02em}
+.modal form{display:flex;flex-direction:column;gap:1rem}
+.modal label{font:500 .68rem "DM Mono",monospace;text-transform:uppercase;display:flex;flex-direction:column;gap:.4rem;color:var(--gray)}
+.modal input,.modal textarea{font:400 .9rem "DM Sans",sans-serif;padding:.6rem .7rem;border:1px solid var(--hair);border-radius:8px;background:var(--white);color:var(--black)}
+.modal input:focus,.modal textarea:focus{outline:2px solid var(--black);outline-offset:1px}
+.modal button[type="submit"]{margin-top:.4rem;padding:.75rem 1rem;background:var(--black);color:var(--white);border:0;border-radius:999px;font:600 .8rem "DM Sans",sans-serif;cursor:pointer;transition:opacity .2s}
+.modal button[type="submit"]:hover{opacity:.8}
+.modal-success{font-size:.95rem;line-height:1.6}
+@media(max-width:560px){.modal-grid{grid-template-columns:1fr}.modal-photo{min-height:150px}}
