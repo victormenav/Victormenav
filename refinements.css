@@ -1,7 +1,7 @@
 /* Final editorial refinements: compact hero, high-impact display and unified sans text. */
 .intro{padding-top:4.6vw;padding-bottom:7vw}
 .intro h1 .resilience{display:block}
-.intro h1 .technology{display:block;font-family:"DM Mono","DM Sans",sans-serif;font-size:.53em;font-style:italic;font-weight:500;letter-spacing:-.08em;line-height:.86;margin-left:.035em}
+.intro h1 .technology{display:block;font-family:"Fraunces","DM Sans",serif;font-size:.58em;font-style:italic;font-weight:600;letter-spacing:-.015em;line-height:.86;margin-left:.035em}
 .currently{display:inline-block;font-family:"DM Sans",Arial,sans-serif;font-weight:700;font-size:.9em;letter-spacing:.01em;padding:.08rem .32rem;border:1px solid currentColor;border-radius:999px}
 .social-mark{display:inline-grid;place-items:center;width:1.25rem;height:1.25rem;border:1px solid currentColor;border-radius:50%;font:700 .64rem/1 "DM Sans",sans-serif}
 .intro h1{font-family:"Arial Black",Impact,"DM Sans",sans-serif;font-weight:900;font-stretch:condensed;letter-spacing:-.105em;line-height:.76;transform:scaleX(.94);transform-origin:left center}
@@ -9,3 +9,8 @@
 .role-head p,.credential-content h3{font-family:"DM Sans",Arial,sans-serif}
 @media (min-width:651px) and (max-width:900px){.intro{padding-top:5.5vw;padding-bottom:6.5vw}.intro h1{letter-spacing:-.1em}}
 @media (max-width:650px){.intro{padding-top:3.1rem;padding-bottom:4.4rem}.intro h1{letter-spacing:-.09em;line-height:.78}.header nav{gap:.72rem}.header nav a{font-size:.53rem}}
+.portrait{position:relative}
+.whatsapp-fab{position:absolute;right:-1.05rem;bottom:2.6rem;display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.1rem;background:var(--black);color:var(--white);border-radius:999px;text-decoration:none;font:600 .74rem "DM Sans",sans-serif;box-shadow:0 8px 24px rgba(17,17,15,.28);transition:background-color .25s ease,color .25s ease,transform .25s ease}
+.whatsapp-fab svg{width:16px;height:16px;fill:currentColor}
+.whatsapp-fab:hover,.whatsapp-fab:focus-visible{background:#25D366;color:var(--black);transform:translateY(-2px)}
+@media(max-width:650px){.whatsapp-fab{position:static;margin-top:1rem;box-shadow:none}}
