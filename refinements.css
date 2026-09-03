@@ -1,7 +1,7 @@
 /* Final editorial refinements: compact hero, high-impact display and unified sans text. */
 .intro{padding-top:4.6vw;padding-bottom:7vw}
 .intro h1 .resilience{display:block}
-.intro h1 .technology{display:block;font-family:"Fraunces","DM Sans",serif;font-size:.58em;font-style:italic;font-weight:600;letter-spacing:-.015em;line-height:.86;margin-left:.035em}
+.intro h1 .technology{display:block;font-family:"Bubbler One",sans-serif;font-size:.68em;font-style:normal;font-weight:400;letter-spacing:.02em;line-height:1;margin-left:.05em;text-align:right}
 .currently{display:inline-block;font-family:"DM Sans",Arial,sans-serif;font-weight:700;font-size:.9em;letter-spacing:.01em;padding:.08rem .32rem;border:1px solid currentColor;border-radius:999px}
 .social-mark{display:inline-grid;place-items:center;width:1.25rem;height:1.25rem;border:1px solid currentColor;border-radius:50%;font:700 .64rem/1 "DM Sans",sans-serif}
 .intro h1{font-family:"Arial Black",Impact,"DM Sans",sans-serif;font-weight:900;font-stretch:condensed;letter-spacing:-.105em;line-height:.76;transform:scaleX(.94);transform-origin:left center}
