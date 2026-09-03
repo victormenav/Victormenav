@@ -8,7 +8,59 @@
 .role li,.credential-content p{font-family:"DM Sans",Arial,sans-serif;font-size:.78rem;line-height:1.62}
 .role-head p,.credential-content h3{font-family:"DM Sans",Arial,sans-serif}
 @media (min-width:651px) and (max-width:900px){.intro{padding-top:5.5vw;padding-bottom:6.5vw}.intro h1{letter-spacing:-.1em}}
-@media (max-width:650px){.intro{padding-top:3.1rem;padding-bottom:4.4rem}.intro h1{letter-spacing:-.09em;line-height:.78}.header nav{gap:.72rem}.header nav a{font-size:.53rem}}
+@media (max-width:650px){
+    .intro{
+        padding-top:3.1rem;
+        padding-bottom:4.4rem
+    }
+
+    .intro h1{
+        letter-spacing:-.09em;
+        line-height:.78
+    }
+
+    .header{
+        display:grid;
+        grid-template-columns:1fr auto;
+        align-items:center;
+        gap:.8rem
+    }
+
+    .header .wordmark{
+        white-space:nowrap
+    }
+
+    .header nav{
+        grid-column:1 / -1;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:.5rem;
+        width:100%
+    }
+
+    .header nav a{
+        font-size:.53rem;
+        white-space:nowrap
+    }
+
+    .header nav .btn-cv{
+        margin-left:0;
+        padding:7px 9px;
+        font-size:9px;
+        gap:5px
+    }
+
+    .header nav .btn-cv svg{
+        width:13px;
+        height:13px
+    }
+
+    .header .linkedin-icon{
+        grid-column:2;
+        grid-row:1
+    }
+}
 .portrait{position:relative}
 .whatsapp-fab{position:absolute;right:-1.05rem;bottom:2.6rem;display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.1rem;background:var(--black);color:var(--white);border-radius:999px;text-decoration:none;font:600 .74rem "DM Sans",sans-serif;box-shadow:0 8px 24px rgba(17,17,15,.28);transition:background-color .25s ease,color .25s ease,transform .25s ease}
 .whatsapp-fab svg{width:16px;height:16px;fill:currentColor}
@@ -47,4 +99,16 @@
     line-height: 1;
     white-space: nowrap;
     transition: all 0.25s ease;
+}
+.header nav .btn-cv:hover {
+    opacity:.7;
+    transform:translateY(-1px)
+}
+
+.header nav .btn-cv:hover svg {
+    transform:translateY(2px)
+}
+
+.header nav .btn-cv svg {
+    transition:transform .25s ease
 }
