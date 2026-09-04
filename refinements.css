@@ -129,3 +129,72 @@
         height: 14px;
     }
 }
+* DOWNLOAD CV — DISEÑO FINAL */
+.header nav a.btn-cv {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+
+    background: var(--black) !important;
+    color: var(--white) !important;
+
+    border: 0 !important;
+    border-radius: 999px !important;
+
+    padding: 10px 16px !important;
+    margin-left: 10px !important;
+
+    font-family: "DM Sans", Arial, sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: .06em !important;
+    line-height: 1 !important;
+
+    white-space: nowrap !important;
+    text-decoration: none !important;
+
+    box-shadow: 0 8px 24px rgba(17,17,15,.20) !important;
+
+    transition:
+        transform .25s ease,
+        background-color .25s ease,
+        color .25s ease !important;
+}
+
+.header nav a.btn-cv svg {
+    width: 15px !important;
+    height: 15px !important;
+    flex-shrink: 0 !important;
+    transition: transform .25s ease !important;
+}
+
+.header nav a.btn-cv:hover {
+    background: #25D366 !important;
+    color: var(--black) !important;
+    transform: translateY(-2px) !important;
+}
+
+.header nav a.btn-cv:hover svg {
+    transform: translateY(2px) !important;
+}
+
+@media (max-width:650px) {
+
+    .header nav a.btn-cv {
+        padding: 8px 12px !important;
+        margin-left: 0 !important;
+        font-size: 9px !important;
+        gap: 5px !important;
+    }
+
+    .header nav a.btn-cv svg {
+        width: 13px !important;
+        height: 13px !important;
+    }
+}
+@media (max-width:650px) {
+    .intro h1 .resilience {
+        letter-spacing: -0.04em;
+    }
+}
