@@ -230,19 +230,45 @@
         </div>
     </div>
     <footer><span>© 2026 Víctor Mena Vega</span><a href="#inicio">VOLVER ARRIBA ↑</a></footer>
-    <script>const portrait = document.querySelector('.portrait-toggle'); portrait.addEventListener('click', () => {const color = portrait.getAttribute('aria-pressed') === 'true'; portrait.setAttribute('aria-pressed', String(!color)); portrait.setAttribute('aria-label', color ? 'Mostrar retrato a color' : 'Mostrar retrato en blanco y negro');}); const emailLink = document.getElementById('emailContactLink'), overlay = document.getElementById('contactModalOverlay'), closeBtn = document.getElementById('contactModalClose'), cForm = document.getElementById('contactForm'), cSuccess = document.getElementById('contactModalSuccess'); function openModal(e) {e.preventDefault(); overlay.hidden = false;} function closeModal() {overlay.hidden = true; cForm.hidden = false; cSuccess.hidden = true; cForm.reset();} emailLink.addEventListener('click', openModal); closeBtn.addEventListener('click', closeModal); overlay.addEventListener('click', e => {if (e.target === overlay) closeModal();}); cForm.addEventListener('submit', async e => {e.preventDefault(); try {const res = await fetch(cForm.action, {method: 'POST', body: new FormData(cForm), headers: {Accept: 'application/json'}}); if (res.ok) {cForm.hidden = true; cSuccess.hidden = false;} else {alert('Hubo un problema al enviar. Escríbeme directo a victorm@infolinkcr.com');} } catch (err) {alert('Hubo un problema al enviar. Escríbeme directo a victorm@infolinkcr.com');} });</script>
+ <script>
+const portrait = document.querySelector('.portrait-toggle');
+
+portrait.addEventListener('click', () => {
+    const color = portrait.getAttribute('aria-pressed') === 'true';
+
+    portrait.setAttribute('aria-pressed', String(!color));
+
+    portrait.setAttribute(
+        'aria-label',
+        color ? 'Mostrar retrato a color' : 'Mostrar retrato en blanco y negro'
+    );
+});
+
+const emailLink = document.getElementById('emailContactLink');
+const overlay = document.getElementById('contactModalOverlay');
+const closeBtn = document.getElementById('contactModalClose');
+const cForm = document.getElementById('contactForm');
+const cSuccess = document.getElementById('contactModalSuccess');
+const cTitle = document.getElementById('contactModalTitle');
+
+function openModal(e) {
+    e.preventDefault();
+
+    overlay.hidden = false;
+    cTitle.textContent = 'Escríbeme';
+    cForm.hidden = false;
+    cSuccess.hidden = true;
+}
+
 function closeModal() {
     overlay.hidden = true;
     cForm.hidden = false;
     cSuccess.hidden = true;
     cForm.reset();
-
-    // Restablece el título para la próxima vez
     cTitle.textContent = 'Escríbeme';
 }
 
 emailLink.addEventListener('click', openModal);
-
 closeBtn.addEventListener('click', closeModal);
 
 overlay.addEventListener('click', e => {
@@ -269,21 +295,11 @@ cForm.addEventListener('submit', async e => {
         });
 
         if (res.ok) {
-
-            // Borra los campos
             cForm.reset();
-
-            // Cambia "Escríbeme" por "Enviado"
             cTitle.textContent = 'Enviado';
-
-            // Oculta el formulario
             cForm.hidden = true;
-
-            // Muestra mensaje de éxito
             cSuccess.hidden = false;
-
         } else {
-
             submitButton.disabled = false;
             submitButton.textContent = 'Enviar';
 
@@ -291,7 +307,6 @@ cForm.addEventListener('submit', async e => {
         }
 
     } catch (err) {
-
         submitButton.disabled = false;
         submitButton.textContent = 'Enviar';
 
@@ -299,6 +314,7 @@ cForm.addEventListener('submit', async e => {
     }
 });
 </script>
-</body>
 
+
+</body>
 </html>
