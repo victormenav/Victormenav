@@ -198,3 +198,6 @@
         letter-spacing: -0.04em;
     }
 }
+#contactForm[hidden] {
+    display: none !important;
+}
