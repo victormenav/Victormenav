@@ -264,8 +264,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 // BORRA NOMBRE, CORREO Y MENSAJE
                 contactForm.reset();
 
+                 // Cambia el título del formulario
+                document.getElementById('contactModalTitle').textContent = 'Enviado';
+
                 // Oculta el formulario
-                contactForm.style.display = 'none';
+                contactForm.hidden = true;
 
                 // Muestra mensaje de éxito
                 contactModalSuccess.hidden = false;
