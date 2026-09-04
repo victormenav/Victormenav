@@ -201,3 +201,15 @@
 #contactForm[hidden] {
     display: none !important;
 }
+/* SECCIÓN 04 — TAMAÑO DEL TITULAR */
+.contact-headline {
+    font-size: 7.4rem !important;
+    line-height: 0.95 !important;
+}
+/* SECCIÓN 04 — MÓVIL */
+@media (max-width: 650px) {
+    .contact-headline {
+        font-size: 5.24rem !important;
+        line-height: 0.95 !important;
+    }
+}
