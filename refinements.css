@@ -85,7 +85,7 @@
     padding: .65rem 1.1rem;
     background: var(--black);
     color: var(--white);
-    border: 0;
+    border: none;
     border-radius: 999px;
     text-decoration: none;
     font-family: "DM Sans", Arial, sans-serif;
@@ -113,17 +113,19 @@
 
 .header nav .btn-cv:hover svg {
     transform: translateY(2px);
-@media (max-width:650px){
-    .header nav .btn-cv{
-        margin-left:0;
-        padding:.65rem 1rem;
-        font-size:.65rem;
-        gap:6px;
-        border-radius:999px;
+}
+
+@media (max-width:650px) {
+    .header nav .btn-cv {
+        margin-left: 0;
+        padding: .65rem 1rem;
+        font-size: .65rem;
+        gap: 6px;
+        border-radius: 999px;
     }
 
-    .header nav .btn-cv svg{
-        width:14px;
-        height:14px;
+    .header nav .btn-cv svg {
+        width: 14px;
+        height: 14px;
     }
-}}
+}
