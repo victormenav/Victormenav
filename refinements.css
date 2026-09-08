@@ -129,7 +129,7 @@
         height: 14px;
     }
 }
-* DOWNLOAD CV — DISEÑO FINAL */
+/* DOWNLOAD CV — DISEÑO FINAL */
 .header nav a.btn-cv {
     display: inline-flex !important;
     align-items: center !important;
@@ -211,5 +211,37 @@
     .contact-headline {
         font-size: 5.24rem !important;
         line-height: 0.95 !important;
+    }
+}
+
+/* ============================================================
+   SEO — El H1 debe contener el nombre, no solo el eslogan.
+   El nombre se añade como línea superior del lockup, visible
+   (nunca oculto: Google penaliza el texto escondido en H1).
+   Se resetea todo lo que hereda de .intro h1: familia, peso,
+   ancho, interletraje e interlínea. El scaleX(1.0638) anula
+   el scaleX(.94) del padre para que el texto pequeño no salga
+   comprimido.
+   ============================================================ */
+.intro h1 .hero-name{
+    display:block;
+    font-family:"DM Sans",Arial,sans-serif;
+    font-size:clamp(.72rem,1.05vw,1rem);
+    font-weight:600;
+    font-stretch:normal;
+    letter-spacing:.24em;
+    line-height:1.3;
+    text-transform:uppercase;
+    color:var(--gray);
+    margin-bottom:1.15rem;
+    transform:scaleX(1.0638);
+    transform-origin:left center;
+}
+
+@media (max-width:650px){
+    .intro h1 .hero-name{
+        font-size:.7rem;
+        letter-spacing:.18em;
+        margin-bottom:.9rem;
     }
 }
