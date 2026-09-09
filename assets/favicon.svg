@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Víctor Mena Vega">
-  <rect width="64" height="64" rx="12" fill="#11110f"/>
-  <path d="M12 19 L22.5 45 L33 19" fill="none" stroke="#fafafa" stroke-width="6.5" stroke-linecap="square" stroke-linejoin="miter"/>
-  <path d="M37 45 L37 19 L45.5 37 L54 19 L54 45" fill="none" stroke="#fafafa" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Víctor Mena Vega"><rect width="64" height="64" rx="12" fill="#11110f"/><g fill="#fafafa" transform="translate(9.56 40.03) scale(0.031139 -0.031139)"><g transform="translate(0.0 0)"><path d="M197 0 14 504H172L289 141L406 504H562L380 0Z"/></g><g transform="translate(532.0 0)"><path d="M65 0V504H196L209 439Q233 474 272.5 495.0Q312 516 364 516Q401 516 431.0 506.5Q461 497 484.0 478.5Q507 460 522 432Q551 471 596.0 493.5Q641 516 694 516Q762 516 806.5 489.0Q851 462 873.0 411.0Q895 360 895 287V0H746V274Q746 329 724.5 359.5Q703 390 656 390Q626 390 603.0 375.0Q580 360 567.5 333.0Q555 306 555 268V0H406V274Q406 329 384.0 359.5Q362 390 313 390Q285 390 262.5 375.0Q240 360 227.5 333.0Q215 306 215 268V0Z"/></g></g></svg>
