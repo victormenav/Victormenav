@@ -76,59 +76,6 @@
 .modal button[type="submit"]:hover{opacity:.8}
 .modal-success{font-size:.95rem;line-height:1.6}
 @media(max-width:560px){.modal-grid{grid-template-columns:1fr}.modal-photo{min-height:150px}}
-.header nav .btn-cv {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    margin-left: 10px;
-    padding: .65rem 1.1rem;
-    background: var(--black);
-    color: var(--white);
-    border: none;
-    border-radius: 999px;
-    text-decoration: none;
-    font-family: "DM Sans", Arial, sans-serif;
-    font-size: .74rem;
-    font-weight: 600;
-    letter-spacing: .04em;
-    line-height: 1;
-    white-space: nowrap;
-    box-shadow: 0 8px 24px rgba(17,17,15,.18);
-    transition: transform .25s ease, background-color .25s ease, color .25s ease;
-}
-
-.header nav .btn-cv:hover,
-.header nav .btn-cv:focus-visible {
-    background: var(--white);
-    color: var(--black);
-    transform: translateY(-2px);
-}
-
-.header nav .btn-cv svg {
-    width: 16px;
-    height: 16px;
-    transition: transform .25s ease;
-}
-
-.header nav .btn-cv:hover svg {
-    transform: translateY(2px);
-}
-
-@media (max-width:650px) {
-    .header nav .btn-cv {
-        margin-left: 0;
-        padding: .65rem 1rem;
-        font-size: .65rem;
-        gap: 6px;
-        border-radius: 999px;
-    }
-
-    .header nav .btn-cv svg {
-        width: 14px;
-        height: 14px;
-    }
-}
 /* DOWNLOAD CV — DISEÑO FINAL */
 .header nav a.btn-cv {
     display: inline-flex !important;
@@ -244,4 +191,36 @@
         letter-spacing:.18em;
         margin-bottom:.9rem;
     }
+}
+
+
+/* Enlace a la página de perfil, en su propia línea bajo el resumen */
+.summary .profile-link{margin:1.15rem 0 0}
+.summary .profile-link a{
+    display:inline-block;
+    font:600 .75rem "DM Sans",Arial,sans-serif;
+    color:var(--black);
+    text-decoration:none;
+    border-bottom:1px solid var(--black);
+    padding-bottom:.25rem;
+}
+.summary .profile-link a:hover{opacity:.5}
+
+
+/* ============================================================
+   Enlaces: el sitio no tenía reset, así que el wordmark, el menú
+   y los enlaces del cuerpo salían con el estilo por defecto del
+   navegador (azul y subrayados). Heredan el color del contexto,
+   lo que los deja negros sobre fondo claro y blancos sobre el
+   negro de la sección de contacto. El subrayado del pie se
+   conserva: `footer a` gana por especificidad.
+   ============================================================ */
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+a:focus-visible{
+    outline:2px solid currentColor;
+    outline-offset:3px;
 }
