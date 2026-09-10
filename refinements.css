@@ -56,6 +56,29 @@
     }
 }
 /* ============================================================
+   Flechas. Antes eran caracteres Unicode (↑ ↓ ↗). iOS y Android
+   los tratan como emoji y los pintaban como un cuadrito azul con
+   la flecha blanca, ajeno al diseño. Ahora son SVG dibujados con
+   el trazo del texto: heredan color y tamaño (1em) y se ven igual
+   en todos los dispositivos.
+   ============================================================ */
+.ico{
+    width:1em;
+    height:1em;
+    flex:none;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    vertical-align:-.12em;
+}
+.contact-row .ico{width:1.05em;height:1.05em;stroke-width:1.9}
+.inline-link .ico{width:1.15em;height:1.15em}
+footer .ico{width:.95em;height:.95em;stroke-width:2.2}
+
+
+/* ============================================================
    LinkedIn en el header. El único color saturado de la página:
    marca el enlace que más interesa que pulsen. El glifo va solo,
    sin el cuadro azul del logotipo, para no meter un bloque de
@@ -167,6 +190,13 @@
     .intro .lockup .resilience {
         letter-spacing: -0.04em;
     }
+
+    /* A 18.8vw «RESILIENCIA» mide más que el ancho de la pantalla y
+       la última A quedaba cortada por el borde. 15vw es el tamaño
+       máximo que entra completo desde 320px en adelante. */
+    .intro .lockup{
+        font-size:15vw;
+    }
 }
 #contactForm[hidden] {
     display: none !important;
@@ -178,9 +208,27 @@
 }
 /* SECCIÓN 04 — MÓVIL */
 @media (max-width: 650px) {
+    /* 5.24rem son 84px fijos: «TECNOLOGÍA» a ese tamaño mide unos
+       480px y se salía de una pantalla de 390px, así que el titular
+       aparecía cortado. En vw crece con la pantalla y siempre cabe. */
     .contact-headline {
-        font-size: 5.24rem !important;
+        font-size: 15.4vw !important;
         line-height: 0.95 !important;
+    }
+
+    /* La rejilla dejaba que el titular estirara la columna más allá
+       del ancho de la pantalla, y todo lo demás la seguía. */
+    .contact-grid{
+        grid-template-columns:minmax(0,1fr);
+    }
+
+    /* El bloque de contacto tenía max-width:380px fijo. En una
+       pantalla de 390px con 20px de margen a cada lado solo caben
+       350px, así que la fila se salía 30px y la flecha del final
+       quedaba fuera de la pantalla (el body la ocultaba). */
+    .contact-info,
+    .contact-blurb{
+        max-width:100%;
     }
 }
 
