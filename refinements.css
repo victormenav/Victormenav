@@ -205,3 +205,81 @@ a:focus-visible{
     font-weight:inherit;
     line-height:inherit;
 }
+
+
+/* ============================================================
+   Recomendaciones. Reutiliza la retícula de .ruled-section y el
+   mismo patrón de filas de la sección de experiencia: línea
+   superior sólida, separadores finos entre citas.
+   ============================================================ */
+.quotes{border-top:1px solid var(--black)}
+.quote{
+    margin:0;
+    padding:1.3rem 0 1.7rem;
+    border-bottom:1px solid var(--hair);
+}
+.quote:last-of-type{border-bottom:none}
+.quote p{
+    font:400 .82rem/1.68 "DM Sans",Arial,sans-serif;
+    margin:0 0 .85rem;
+    max-width:600px;
+    text-align:justify;
+    hyphens:auto;
+    -webkit-hyphens:auto;
+    text-wrap:pretty;
+}
+.quote p:last-of-type{margin-bottom:1.1rem}
+/* Atribución: retrato circular a la izquierda, nombre y cargo apilados
+   a la derecha. La imagen ocupa las dos filas del grid, así que el
+   bloque se mantiene alineado aunque el cargo pase a dos líneas. */
+.quote cite{
+    font-style:normal;
+    display:grid;
+    grid-template-columns:44px 1fr;
+    column-gap:.85rem;
+    align-items:center;
+}
+.quote-face{
+    grid-row:1 / span 2;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    object-fit:cover;
+    background:var(--hair);
+}
+.quote cite b{
+    align-self:end;
+    font:600 .82rem "DM Sans",Arial,sans-serif;
+}
+.quote cite span{
+    align-self:start;
+    margin-top:.2rem;
+    font:500 .68rem/1.5 "DM Mono",monospace;
+    text-transform:uppercase;
+    letter-spacing:.02em;
+    color:var(--gray);
+}
+.quotes-note{
+    font:400 .74rem/1.6 "DM Sans",Arial,sans-serif;
+    color:var(--gray);
+    margin:1.5rem 0 0;
+}
+.quotes-note a{border-bottom:1px solid var(--hair)}
+
+/* En columna angosta la justificación abre huecos entre palabras
+   («ríos» de espacio en blanco). Bajo 650px el texto se alinea a la
+   izquierda, que es lo correcto tipográficamente a ese ancho. */
+@media (max-width:650px){
+    .quote p{
+        text-align:left;
+        max-width:none;
+    }
+    .quote cite{
+        grid-template-columns:38px 1fr;
+        column-gap:.7rem;
+        align-items:start;
+    }
+    .quote-face{width:38px;height:38px}
+    .quote cite b{align-self:start}
+    .quote cite span{font-size:.63rem}
+}
