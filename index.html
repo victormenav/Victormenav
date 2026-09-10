@@ -46,7 +46,12 @@
 
         .portrait-toggle img {
             filter: grayscale(1) contrast(1.13);
-            transition: filter .35s ease
+            transition: filter .35s ease;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            object-position: center !important;
+            background-color: #FAFAFA !important;
         }
 
         .portrait-toggle:hover img,
