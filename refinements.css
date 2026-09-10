@@ -55,6 +55,29 @@
         grid-row:1
     }
 }
+/* ============================================================
+   LinkedIn en el header. El único color saturado de la página:
+   marca el enlace que más interesa que pulsen. El glifo va solo,
+   sin el cuadro azul del logotipo, para no meter un bloque de
+   color en una cabecera que por lo demás es tipografía negra.
+   ============================================================ */
+.header .linkedin-icon{
+    color:#0A66C2;
+}
+.header .linkedin-icon svg{
+    width:18px;
+    height:18px;
+    fill:currentColor;
+    transition:color .25s ease,transform .25s ease;
+}
+.header .linkedin-icon:hover,
+.header .linkedin-icon:focus-visible{
+    color:#004182;
+}
+.header .linkedin-icon:hover svg{
+    transform:translateY(-1px);
+}
+
 .portrait{position:relative}
 .whatsapp-fab{position:absolute;right:-1.05rem;bottom:2.6rem;display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.1rem;background:var(--black);color:var(--white);border-radius:999px;text-decoration:none;font:600 .74rem "DM Sans",sans-serif;box-shadow:0 8px 24px rgba(17,17,15,.28);transition:background-color .25s ease,color .25s ease,transform .25s ease}
 .whatsapp-fab svg{width:16px;height:16px;fill:currentColor}
