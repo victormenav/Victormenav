@@ -4,7 +4,7 @@
 .intro .lockup .technology{display:block;font-family:"Bubbler One",sans-serif;font-size:.68em;font-style:normal;font-weight:400;letter-spacing:.02em;line-height:1;margin-left:.05em;text-align:right}
 .currently{display:inline-block;font-family:"DM Sans",Arial,sans-serif;font-weight:700;font-size:.9em;letter-spacing:.01em;padding:.08rem .32rem;border:1px solid currentColor;border-radius:999px}
 .social-mark{display:inline-grid;place-items:center;width:1.25rem;height:1.25rem;border:1px solid currentColor;border-radius:50%;font:700 .64rem/1 "DM Sans",sans-serif}
-.intro .lockup{font-family:"Arial Black",Impact,"DM Sans",sans-serif;font-weight:900;font-stretch:condensed;letter-spacing:-.105em;line-height:.76;transform:scaleX(.94);transform-origin:left center}
+.intro .lockup{font-family:"Arial Black",Impact,"DM Sans",sans-serif;font-weight:900;font-stretch:condensed;letter-spacing:-.105em;line-height:.76;transform:scaleX(.94);transform-origin:left center;margin-bottom:3vw}
 .role li,.credential-content p{font-family:"DM Sans",Arial,sans-serif;font-size:.78rem;line-height:1.62}
 .role-head p,.credential-content h3{font-family:"DM Sans",Arial,sans-serif}
 @media (min-width:651px) and (max-width:900px){.intro{padding-top:5.5vw;padding-bottom:6.5vw}.intro .lockup{letter-spacing:-.1em}}
@@ -55,52 +55,6 @@
         grid-row:1
     }
 }
-/* ============================================================
-   Flechas. Antes eran caracteres Unicode (↑ ↓ ↗). iOS y Android
-   los tratan como emoji y los pintaban como un cuadrito azul con
-   la flecha blanca, ajeno al diseño. Ahora son SVG dibujados con
-   el trazo del texto: heredan color y tamaño (1em) y se ven igual
-   en todos los dispositivos.
-   ============================================================ */
-.ico{
-    width:1em;
-    height:1em;
-    flex:none;
-    fill:none;
-    stroke:currentColor;
-    stroke-width:2;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    vertical-align:-.12em;
-}
-.contact-row .ico{width:1.05em;height:1.05em;stroke-width:1.9}
-.inline-link .ico{width:1.15em;height:1.15em}
-footer .ico{width:.95em;height:.95em;stroke-width:2.2}
-
-
-/* ============================================================
-   LinkedIn en el header. El único color saturado de la página:
-   marca el enlace que más interesa que pulsen. El glifo va solo,
-   sin el cuadro azul del logotipo, para no meter un bloque de
-   color en una cabecera que por lo demás es tipografía negra.
-   ============================================================ */
-.header .linkedin-icon{
-    color:#0A66C2;
-}
-.header .linkedin-icon svg{
-    width:18px;
-    height:18px;
-    fill:currentColor;
-    transition:color .25s ease,transform .25s ease;
-}
-.header .linkedin-icon:hover,
-.header .linkedin-icon:focus-visible{
-    color:#004182;
-}
-.header .linkedin-icon:hover svg{
-    transform:translateY(-1px);
-}
-
 .portrait{position:relative}
 .whatsapp-fab{position:absolute;right:-1.05rem;bottom:2.6rem;display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.1rem;background:var(--black);color:var(--white);border-radius:999px;text-decoration:none;font:600 .74rem "DM Sans",sans-serif;box-shadow:0 8px 24px rgba(17,17,15,.28);transition:background-color .25s ease,color .25s ease,transform .25s ease}
 .whatsapp-fab svg{width:16px;height:16px;fill:currentColor}
@@ -190,13 +144,6 @@ footer .ico{width:.95em;height:.95em;stroke-width:2.2}
     .intro .lockup .resilience {
         letter-spacing: -0.04em;
     }
-
-    /* A 18.8vw «RESILIENCIA» mide más que el ancho de la pantalla y
-       la última A quedaba cortada por el borde. 15vw es el tamaño
-       máximo que entra completo desde 320px en adelante. */
-    .intro .lockup{
-        font-size:15vw;
-    }
 }
 #contactForm[hidden] {
     display: none !important;
@@ -208,27 +155,9 @@ footer .ico{width:.95em;height:.95em;stroke-width:2.2}
 }
 /* SECCIÓN 04 — MÓVIL */
 @media (max-width: 650px) {
-    /* 5.24rem son 84px fijos: «TECNOLOGÍA» a ese tamaño mide unos
-       480px y se salía de una pantalla de 390px, así que el titular
-       aparecía cortado. En vw crece con la pantalla y siempre cabe. */
     .contact-headline {
-        font-size: 15.4vw !important;
+        font-size: 5.24rem !important;
         line-height: 0.95 !important;
-    }
-
-    /* La rejilla dejaba que el titular estirara la columna más allá
-       del ancho de la pantalla, y todo lo demás la seguía. */
-    .contact-grid{
-        grid-template-columns:minmax(0,1fr);
-    }
-
-    /* El bloque de contacto tenía max-width:380px fijo. En una
-       pantalla de 390px con 20px de margen a cada lado solo caben
-       350px, así que la fila se salía 30px y la flecha del final
-       quedaba fuera de la pantalla (el body la ocultaba). */
-    .contact-info,
-    .contact-blurb{
-        max-width:100%;
     }
 }
 
