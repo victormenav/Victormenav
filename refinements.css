@@ -4,7 +4,7 @@
 .intro .lockup .technology{display:block;font-family:"Bubbler One",sans-serif;font-size:.68em;font-style:normal;font-weight:400;letter-spacing:.02em;line-height:1;margin-left:.05em;text-align:right}
 .currently{display:inline-block;font-family:"DM Sans",Arial,sans-serif;font-weight:700;font-size:.9em;letter-spacing:.01em;padding:.08rem .32rem;border:1px solid currentColor;border-radius:999px}
 .social-mark{display:inline-grid;place-items:center;width:1.25rem;height:1.25rem;border:1px solid currentColor;border-radius:50%;font:700 .64rem/1 "DM Sans",sans-serif}
-.intro .lockup{font-family:"Arial Black",Impact,"DM Sans",sans-serif;font-weight:900;font-stretch:condensed;letter-spacing:-.105em;line-height:.76;transform:scaleX(.94);transform-origin:left center;margin-bottom:1.3vw}
+.intro .lockup{font-family:"Arial Black",Impact,"DM Sans",sans-serif;font-weight:900;font-stretch:condensed;letter-spacing:-.105em;line-height:.76;transform:scaleX(.94);transform-origin:left center;margin-bottom:0}
 .role li,.credential-content p{font-family:"DM Sans",Arial,sans-serif;font-size:.78rem;line-height:1.62}
 .role-head p,.credential-content h3{font-family:"DM Sans",Arial,sans-serif}
 @media (min-width:651px) and (max-width:900px){.intro{padding-top:5.5vw;padding-bottom:6.5vw}.intro .lockup{letter-spacing:-.1em}}
@@ -266,12 +266,11 @@ a:focus-visible{
 }
 .quotes-note a{border-bottom:1px solid var(--hair)}
 
-/* En columna angosta la justificación abre huecos entre palabras
-   («ríos» de espacio en blanco). Bajo 650px el texto se alinea a la
-   izquierda, que es lo correcto tipográficamente a ese ancho. */
+/* Justificado también en columna angosta, a pedido: puede abrir
+   pequeños huecos entre palabras («ríos») en pantallas muy chicas,
+   pero se mantiene consistente con el resto del sitio. */
 @media (max-width:650px){
     .quote p{
-        text-align:left;
         max-width:none;
     }
     .quote cite{
