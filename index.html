@@ -14,8 +14,7 @@
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <meta name="theme-color" content="#11110f">
 
-    <link rel="preload" as="image" href="/assets/victor-mena-bw.png?v=3" fetchpriority="high">
-    <link rel="preload" as="image" href="/assets/victor-mena-color.png?v=3">
+    <link rel="preload" as="image" href="/assets/victor-mena-color.png?v=4" fetchpriority="high">
 
     <!-- Open Graph -->
     <meta property="og:type" content="profile">
@@ -59,22 +58,13 @@
 
         .portrait-toggle img {
             display: block;
-            filter: grayscale(0);
-            transition: opacity .35s ease
+            filter: grayscale(1);
+            transition: filter .35s ease
         }
 
-        .portrait-toggle .photo-color {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0
-        }
-
-        .portrait-toggle:hover .photo-color,
-        .portrait-toggle[aria-pressed="true"] .photo-color {
-            opacity: 1
+        .portrait-toggle:hover img,
+        .portrait-toggle[aria-pressed="true"] img {
+            filter: grayscale(0)
         }
 
         .portrait-toggle:focus-visible {
@@ -91,7 +81,7 @@
   "alternateName": ["Victor Mena Vega", "Victor Mena", "Víctor Mena"],
   "disambiguatingDescription": "Especialista costarricense en infraestructura y operaciones de TI, radicado en San José, Costa Rica.",
   "url": "https://www.victormena.com/",
-  "image": "https://www.victormena.com/assets/victor-mena.png",
+  "image": "https://www.victormena.com/assets/victor-mena-color.png",
   "jobTitle": "Especialista en Infraestructura y Operaciones de TI",
   "description": "Ejecutivo de Tecnología con más de 30+ años de experiencia en infraestructura y operaciones de TI, liderazgo regional, continuidad operativa, transformación digital e inteligencia artificial aplicada.",
   "address": {
@@ -194,10 +184,9 @@
             <h2 class="lockup"><span class="resilience">RESILIENCIA</span><span class="technology">TECNOLÓGICA.</span></h2>
             <div class="intro-grid">
                 <figure class="portrait"><button class="portrait-toggle" type="button" aria-pressed="false"
-                        aria-label="Mostrar retrato a color"><img class="photo-bw" src="assets/victor-mena-bw.png?v=3"
+                        aria-label="Mostrar retrato a color"><img src="assets/victor-mena-color.png?v=4"
                             alt="Víctor Mena Vega, especialista en infraestructura y operaciones de TI en San José, Costa Rica"
-                            fetchpriority="high"><img class="photo-color"
-                            src="assets/victor-mena-color.png?v=3" alt="" aria-hidden="true"></button>
+                            fetchpriority="high"></button>
                     <figcaption>Víctor Mena Vega — Incorporado al CPIC<br>Infraestructura y Operaciones TI · IA generativa
                     </figcaption><a class="whatsapp-fab" href="https://wa.me/50688202220?text=Vi%20tu%20perfil%20profesional%2C%20me%20gustar%C3%ADa%20que%20conversemos" target="_blank"
                         rel="noreferrer" aria-label="Escribir a Víctor Mena Vega por WhatsApp"><svg viewBox="0 0 24 24"
