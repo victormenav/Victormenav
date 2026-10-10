@@ -549,3 +549,6 @@ footer a:hover{color:var(--ink)}
 .cline a:hover{color:#164a96}
 footer a[href="#inicio"]{color:#c8102e}
 .marquee .mq-dot{font-style:normal;color:var(--ink)}
+/* v54: Aprendizaje continuo en amarillo (sin café) */
+#certificaciones{--signal-ink:#f2b705}
+#certificaciones .seal{color:#0b0b0b}
