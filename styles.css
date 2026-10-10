@@ -557,3 +557,6 @@ footer a[href="#inicio"]{color:#c8102e}
   .hero-copy{order:2}
   .hero-side{position:relative;right:auto;bottom:auto;z-index:2;align-self:flex-end;justify-content:flex-end;margin:-64px 12px 16px 0;-webkit-transform:translateZ(0);transform:translateZ(0)}
 }
+/* v59: botón de play en rojo */
+.pp{background:#c8102e;color:#fff}
+.pp::after{box-shadow:0 0 0 1.5px #c8102e}
