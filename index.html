@@ -1,486 +1,284 @@
 <!doctype html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Víctor Mena Vega | Infraestructura y Operaciones TI</title>
+<meta name="description" content="Víctor Mena Vega, especialista en infraestructura y operaciones de TI en Costa Rica. Más de 30 años liderando equipos, continuidad operativa e IA generativa en 7 países.">
+<meta name="author" content="Víctor Mena Vega">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.victormena.com/">
 
-    <title>Víctor Mena Vega | Infraestructura y Operaciones TI</title>
-    <meta name="description" content="Víctor Mena Vega, especialista en infraestructura y operaciones de TI en Costa Rica. Más de 30 años liderando equipos y continuidad operativa en 7 países.">
-    <link rel="canonical" href="https://www.victormena.com/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#eef1f4">
 
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="alternate icon" href="/assets/favicon.ico">
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-    <meta name="theme-color" content="#11110f">
+<link rel="preload" as="image" href="assets/poster.jpg" fetchpriority="high">
 
-    <link rel="preload" as="image" href="/assets/victor-mena-bw.png?v=5" fetchpriority="high">
-    <link rel="preload" as="image" href="/assets/victor-mena-color.png?v=5">
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Víctor Mena Vega | Infraestructura y Operaciones de TI">
+<meta property="og:description" content="Amplia experiencia liderando infraestructura y operaciones de TI en Centroamérica, Sudamérica y EE. UU. ITIL, continuidad operativa, transformación digital e IA generativa aplicada.">
+<meta property="og:image" content="https://www.victormena.com/assets/og-victor-mena-vega-v4.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Víctor Mena Vega — Infraestructura y Operaciones de TI">
+<meta property="og:url" content="https://www.victormena.com/">
+<meta property="profile:first_name" content="Víctor">
+<meta property="profile:last_name" content="Mena Vega">
+<meta property="og:site_name" content="Víctor Mena Vega">
+<meta property="og:locale" content="es_CR">
+<meta property="og:video" content="https://www.victormena.com/assets/video-victor.mp4">
+<meta property="og:video:type" content="video/mp4">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="Víctor Mena Vega | Infraestructura y Operaciones de TI">
-    <meta property="og:description" content="Más de 30 años liderando infraestructura y operaciones de TI en Centroamérica, Sudamérica y EE. UU. ITIL, continuidad operativa, transformación digital e IA aplicada.">
-    <meta property="og:image" content="https://www.victormena.com/assets/og-victor-mena-vega.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Víctor Mena Vega — Infraestructura y Operaciones de TI">
-    <meta property="og:url" content="https://www.victormena.com/">
-    <meta property="profile:first_name" content="Víctor">
-    <meta property="profile:last_name" content="Mena Vega">
-    <meta property="og:site_name" content="Víctor Mena Vega">
-    <meta property="og:locale" content="es_CR">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Víctor Mena Vega | Infraestructura y Operaciones de TI">
+<meta name="twitter:description" content="Amplia experiencia liderando infraestructura y operaciones de TI en Centroamérica, Sudamérica y EE. UU.">
+<meta name="twitter:image" content="https://www.victormena.com/assets/og-victor-mena-vega-v4.png">
+<meta name="twitter:image:alt" content="Víctor Mena Vega — Infraestructura y Operaciones de TI">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Víctor Mena Vega | Infraestructura y Operaciones de TI">
-    <meta name="twitter:description" content="Más de 30 años liderando infraestructura y operaciones de TI en Centroamérica, Sudamérica y EE. UU.">
-    <meta name="twitter:image" content="https://www.victormena.com/assets/og-victor-mena-vega.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bubbler+One&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@1,9..144,500..600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="refinements.css">
-    <style>
-        .portrait-toggle {
-            display: block;
-            width: 100%;
-            padding: 0;
-            border: 0;
-            background: transparent;
-            position: relative;
-            cursor: pointer;
-            border-radius: 17px;
-            overflow: hidden
-        }
-
-        .portrait-toggle img {
-            display: block;
-            filter: grayscale(0);
-            transition: opacity .35s ease
-        }
-
-        .portrait-toggle .photo-color {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0
-        }
-
-        .portrait-toggle:hover .photo-color,
-        .portrait-toggle[aria-pressed="true"] .photo-color {
-            opacity: 1
-        }
-
-        .portrait-toggle:focus-visible {
-            outline: 3px solid #11110f;
-            outline-offset: 5px
-        }
-    </style>
-
-    <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Víctor Mena Vega",
-  "alternateName": ["Victor Mena Vega", "Victor Mena", "Víctor Mena"],
-  "disambiguatingDescription": "Especialista costarricense en infraestructura y operaciones de TI, radicado en San José, Costa Rica.",
-  "url": "https://www.victormena.com/",
-  "image": "https://www.victormena.com/assets/victor-mena-color.png",
-  "jobTitle": "Especialista en Infraestructura y Operaciones de TI",
-  "description": "Ejecutivo de Tecnología con más de 30+ años de experiencia en infraestructura y operaciones de TI, liderazgo regional, continuidad operativa, transformación digital e inteligencia artificial aplicada.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "San José",
-    "addressCountry": "CR"
-  },
-  "email": "mailto:victorm@infolinkcr.com",
-  "telephone": "+506-8820-2220",
-  "knowsLanguage": ["es", "en"],
-  "worksFor": {
-    "@type": "OrganizationRole",
-    "roleName": "Especialista de TI para Centroamérica y Sudamérica",
-    "startDate": "2016-07",
-    "endDate": "2026-07",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Volaris",
-      "url": "https://www.volaris.com/"
-    }
-  },
-  "nationality": {
-    "@type": "Country",
-    "name": "Costa Rica"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/in/victormenav/",
-    "https://github.com/victormenav"
-  ],
-  "alumniOf": [
+  "@graph": [
     {
-      "@type": "CollegeOrUniversity",
-      "name": "Universidad Metropolitana Castro Carazo"
+      "@type": "Person",
+      "@id": "https://www.victormena.com/#person",
+      "name": "Víctor Mena Vega",
+      "alternateName": ["Victor Mena Vega", "Victor Mena", "Víctor Mena"],
+      "disambiguatingDescription": "Especialista costarricense en infraestructura y operaciones de TI, radicado en San José, Costa Rica.",
+      "url": "https://www.victormena.com/",
+      "image": "https://www.victormena.com/assets/victor-mena.jpg",
+      "jobTitle": "Especialista en Infraestructura y Operaciones de TI",
+      "description": "Ejecutivo de Tecnología con más de 30 años de experiencia en infraestructura y operaciones de TI, liderazgo regional, continuidad operativa, transformación digital e inteligencia artificial aplicada.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San José",
+        "addressCountry": "CR"
+      },
+      "email": "mailto:victorm@infolinkcr.com",
+      "telephone": "+506-8820-2220",
+      "knowsLanguage": ["es", "en"],
+      "worksFor": {
+        "@type": "OrganizationRole",
+        "roleName": "Especialista de TI para Centroamérica y Sudamérica",
+        "startDate": "2016-07",
+        "endDate": "2026-07",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Volaris",
+          "url": "https://www.volaris.com/"
+        }
+      },
+      "nationality": {
+        "@type": "Country",
+        "name": "Costa Rica"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/victormenav/",
+        "https://github.com/victormenav"
+      ],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Universidad Metropolitana Castro Carazo" },
+        { "@type": "CollegeOrUniversity", "name": "EUDE Business School" },
+        { "@type": "CollegeOrUniversity", "name": "INCAE Business School" }
+      ],
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "name": "Máster en IA para la Gestión Empresarial", "recognizedBy": { "@type": "Organization", "name": "EUDE Business School" } },
+        { "@type": "EducationalOccupationalCredential", "name": "Global MOOC on the Ethics of AI", "recognizedBy": [{ "@type": "Organization", "name": "UNESCO" }, { "@type": "Organization", "name": "LG AI Research" }] },
+        { "@type": "EducationalOccupationalCredential", "name": "Scrum Fundamentals Certified (SFC)", "recognizedBy": { "@type": "Organization", "name": "SCRUMstudy" } }
+      ],
+      "knowsAbout": [
+        "ITIL",
+        "Infraestructura de TI",
+        "Operaciones de TI",
+        "Continuidad operativa",
+        "Transformación digital",
+        "Gestión de proyectos",
+        "Gestión de riesgos",
+        "Inteligencia artificial aplicada a operaciones de TI",
+        "IA generativa"
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Colegio de Profesionales en Informática y Computación (CPIC)"
+      }
     },
     {
-      "@type": "CollegeOrUniversity",
-      "name": "EUDE Business School"
+      "@type": "ProfilePage",
+      "@id": "https://www.victormena.com/#webpage",
+      "url": "https://www.victormena.com/",
+      "name": "Víctor Mena Vega | Infraestructura y Operaciones TI",
+      "inLanguage": "es-CR",
+      "mainEntity": { "@id": "https://www.victormena.com/#person" }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Víctor Mena Vega se presenta",
+      "description": "Video de presentación de Víctor Mena Vega, especialista en infraestructura y operaciones de TI.",
+      "thumbnailUrl": "https://www.victormena.com/assets/poster.jpg",
+      "contentUrl": "https://www.victormena.com/assets/video-victor.mp4",
+      "uploadDate": "2026-10-09",
+      "duration": "PT6S"
     }
-  ],
-  "knowsAbout": [
-    "ITIL",
-    "Infraestructura de TI",
-    "Operaciones de TI",
-    "Continuidad operativa",
-    "Transformación digital",
-    "Gestión de proyectos",
-    "Gestión de riesgos",
-    "Inteligencia artificial aplicada a operaciones de TI"
-  ],
-  "memberOf": {
-    "@type": "Organization",
-    "name": "Colegio de Profesionales en Informática y Computación (CPIC)"
-  }
+  ]
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body><a class="skip" href="#contenido">Ir al contenido</a>
-<header class="header">
-    <h1 class="wordmark-h1"><a class="wordmark" href="#inicio">VÍCTOR MENA VEGA</a></h1>
+<body>
 
-    <nav aria-label="Navegación principal">
-        <a href="#experiencia">EXPERIENCIA</a>
-        <a href="#formacion">FORMACIÓN</a>
-        <a href="#contacto">CONTÁCTEME</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="top" id="topbar"><div class="wrap">
+  <div class="brandbox"><a class="brand" href="#inicio"><span class="mark" aria-hidden="true">VM</span><span class="bname">Víctor Mena Vega</span></a><a class="linkedin-icon" href="https://www.linkedin.com/in/victormenav/" target="_blank" rel="noopener" aria-label="Abrir el perfil de LinkedIn de Víctor Mena Vega en una pestaña nueva"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3.4A1.8 1.8 0 1 1 5.2 7a1.8 1.8 0 0 1 0-3.6ZM3.7 8.4h3V20h-3V8.4Zm4.9 0h2.9V10h.1c.4-.8 1.4-1.9 3.1-1.9 3.3 0 3.9 2.1 3.9 5V20h-3v-6.1c0-1.5 0-3.3-2.1-3.3s-2.4 1.6-2.4 3.2V20h-3V8.4Z"/></svg></a></div>
+  <div class="navr">
+    <nav class="pill" aria-label="Secciones" id="navLinks"></nav>
+    <a class="cvbtn" href="assets/cv-victor-mena-vega.pdf" target="_blank" rel="noopener" download aria-label="Descargar CV de Víctor Mena Vega (PDF)"><span class="cv-l">Descargar CV</span><span class="cv-s">CV</span> <span aria-hidden="true">↓</span></a>
+    <button type="button" class="glass" id="menuBtn" aria-expanded="false" aria-controls="ov"><span id="menuTxt">Menú</span> <i aria-hidden="true"></i></button>
+  </div>
+</div></header>
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-label="Menú" hidden>
+  <div class="ov-top"><span class="mark" aria-hidden="true" style="background:var(--ink);color:var(--bg)">VM</span><button type="button" id="ovClose">Cerrar</button></div>
+  <ul id="mnav"></ul>
+  <div class="ov-foot"><a href="mailto:victorm@infolinkcr.com">victorm@infolinkcr.com</a><span>San José, Costa Rica</span></div>
+</div>
 
-        <a class="btn-cv"
-           href="/assets/cv-victor-mena-vega.pdf"
-           download
-           aria-label="Descargar CV de Víctor Mena Vega">
-            <svg viewBox="0 0 24 24"
-                 aria-hidden="true"
-                 width="16"
-                 height="16">
-                <path
-                    d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"/>
-            </svg>
-            <span>DOWNLOAD CV</span>
-        </a>
-    </nav>
+<main class="wrap" id="inicio">
 
-    <a class="linkedin-icon"
-       href="https://www.linkedin.com/in/victormenav/"
-       target="_blank"
-       rel="noreferrer"
-       aria-label="Abrir el perfil de LinkedIn de Víctor Mena Vega en una pestaña nueva">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-                d="M5.2 3.4A1.8 1.8 0 1 1 5.2 7a1.8 1.8 0 0 1 0-3.6ZM3.7 8.4h3V20h-3V8.4Zm4.9 0h2.9V10h.1c.4-.8 1.4-1.9 3.1-1.9 3.3 0 3.9 2.1 3.9 5V20h-3v-6.1c0-1.5 0-3.3-2.1-3.3s-2.4 1.6-2.4 3.2V20h-3V8.4Z" />
-        </svg>
-    </a>
-</header>
-    <main id="contenido">
-        <section class="intro" id="inicio">
-            <p class="kicker">Liderazgo regional de tecnología · San José, Costa Rica</p>
-            <h2 class="lockup"><span class="resilience">RESILIENCIA</span><span class="technology">TECNOLÓGICA.</span></h2>
-            <div class="intro-grid">
-                <figure class="portrait"><button class="portrait-toggle" type="button" aria-pressed="false"
-                        aria-label="Mostrar retrato a color"><img class="photo-bw" src="assets/victor-mena-bw.png?v=5"
-                            alt="Víctor Mena Vega, especialista en infraestructura y operaciones de TI en San José, Costa Rica"
-                            fetchpriority="high"><img class="photo-color"
-                            src="assets/victor-mena-color.png?v=5" alt="" aria-hidden="true"></button>
-                    <figcaption>Víctor Mena Vega — Incorporado al CPIC<br>Infraestructura y Operaciones TI · IA generativa
-                    </figcaption><a class="whatsapp-fab" href="https://wa.me/50688202220?text=Vi%20tu%20perfil%20profesional%2C%20me%20gustar%C3%ADa%20que%20conversemos" target="_blank"
-                        rel="noreferrer" aria-label="Escribir a Víctor Mena Vega por WhatsApp"><svg viewBox="0 0 24 24"
-                            width="16" height="16" aria-hidden="true">
-                            <path
-                                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.44 5.15L2 22l5.09-1.53a9.9 9.9 0 0 0 4.95 1.32h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.83 14.13c-.24.68-1.4 1.31-1.94 1.36-.5.05-1.02.24-3.42-.71-2.9-1.15-4.76-4.09-4.9-4.28-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.81 2 .88 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.29-.13.57.17.28.75 1.24 1.61 2.01 1.11 1 2.05 1.31 2.33 1.46.28.14.44.12.6-.07.17-.19.71-.83.9-1.11.19-.28.38-.24.63-.14.26.09 1.65.78 1.94.92.28.14.47.21.54.33.07.12.07.68-.17 1.36Z" />
-                        </svg><span>Hablemos</span></a>
-                </figure>
-                <div class="summary">
-                    <p class="summary-title">Resumen ejecutivo</p>
-                    <p>Profesional de Tecnología con más de 30+ años de experiencia liderando infraestructura y operaciones
-                       de TI para organizaciones multinacionales en los sectores corporativo, hotelería y aviación. </p>
-                    <p>Durante los últimos 10 años dirigí la habilitación tecnológica de operaciones en 7 países de Latinoamérica,
-                        participando en la certificación de una aerolínea ante la autoridad aeronáutica de Costa Rica y liderando proyectos
-                        estratégicos de expansión regional. </p><a
-                        class="inline-link" href="#experiencia">Conocer trayectoria <span>↓</span></a>
-                </div>
-            </div>
-        </section>
-        <section class="about ruled-section">
-            <div class="section-title"><span>01</span>
-                <h2>Perfil</h2>
-            </div>
-            <div class="about-copy">
-                <p class="lead">Especialista en continuidad operativa, infraestructura empresarial, gestión de proyectos, ITIL 
-                    y coordinación regional con equipos multidisciplinarios. Actualmente complemento mi perfil mediante formación 
-                    (Maestría) en IA generativa, cursos de Claude/ChatGPT y otras herramientas aplicadas a la dirección y operación de TI.</p>
-                <p>Mi experiencia integra ejecución tecnológica, gestión de riesgos, proveedores y presupuestos, con planeación y 
-                    ejecución práctica sobre las necesidades de negocio y la disponibilidad operativa. </p>
-            </div>
-        </section>
-        <section class="experience ruled-section" id="experiencia">
-            <div class="section-title"><span>02</span>
-                <h2>Experiencia<br>& proyectos clave</h2>
-            </div>
-            <div>
-                <div class="roles">
-                    <article class="role">
-                        <div class="role-head">
-                            <p><b>Volaris Airlines</b><br>Especialista de TI para Centroamérica y Sudamérica</p><span>2016
-                                - 2026</span>
-                        </div>
-                        <ul>
-                            <li>En conjunto con otras unidades estratégicas del área TI, se brindó dirección y soporte
-                                tecnológico en 7 países, con más de 180 usuarios corporativos y múltiples estaciones aeroportuarias.</li>
-                            <li>Integré el equipo responsable de la certificación de Volaris ante la Dirección General de Aviación Civil 
-                                de Costa Rica (primera aerolínea costarricense).</li>
-                            <li>Formé parte del equipo interdisciplinario que lideró la apertura tecnológica de nuevas operaciones en
-                                 Centroamérica, Sudamérica y EE. UU.</li>
-                            <li>Participé en la migración tecnológica al nuevo Aeropuerto Internacional Jorge Chávez en Lima, asegurando continuidad operativa.</li>
-                        </ul>
-                    </article>
-                    <article class="role">
-                        <div class="role-head">
-                            <p><b>Hotel Presidente</b><br>IT Manager</p><span>2005 - 2016</span>
-                        </div>
-                        <ul>
-                            <li>Modernicé la infraestructura hotelera mediante el modelo MOIT basado en Microsoft WSSRA.</li>
-                            <li>Administré infraestructura basada en Windows Server, Active Directory, firewall y servidores críticos para la operación hotelera.</li>
-                            <li>Formé parte del equipo responsable de la migración del sistema hotelero Fidelio-MICROS Opera, preservando la operación 24/7.</li>
-                        </ul>
-                    </article>
-                    <article class="role">
-                        <div class="role-head">
-                            <p><b>Corporación Surá & Grupo Hotelero Casa Conde</b><br>Encargado de Cómputo</p><span>1997 -
-                                2005</span>
-                        </div>
-                        <ul>
-                            <li>Desarrollé sistemas internos para Contabilidad, Planilla, Presupuesto, Empleados y Bodega bajo plataformas Foxpro y Visual Fox.</li>
-                            <li>Diseñé e implementé redes e infraestructura tecnológica para dos propiedades hoteleras (Hotel Casa Conde y Casa Conde del Mar).</li>
-                        </ul>
-                    </article>
-                </div><a class="inline-link" href="#inicio"><span>↑</span></a>
-            </div>
-        </section>
-        <section class="credentials ruled-section" id="formacion">
-            <div class="section-title"><span>03</span>
-                <h2>Formación<br>& capacidades</h2>
-            </div>
-            <div>
-                <div class="credential-content">
-                    <div>
-                        <h3>Educación y certificaciones</h3>
-                        <p><b>Máster en Inteligencia Artificial para Dirección de Empresas</b><br>EUDE Business School —
-                            España · <span class="currently">2026</span></p>
-                        <p><b>Bachillerato Universitario en Ingeniería en Informática</b><br>Universidad Metropolitana
-                            Castro Carazo · 2005</p>
-                        <p><b>Scrum Fundamentals Certified (SFC)</b><br>SCRUMstudy / VMEdu, Inc. · 2026</p>
-                        <p><b>Gerencia & Liderazgo</b><br>INCAE Business School · 2014</p>
-                    </div>
-                    <div>
-                        <h3>Competencias clave</h3>
-                        <p>Transformación digital · Gestión de infraestructura y operaciones TI · Dirección de proyectos
-                            regionales · Continuidad del negocio (BCP/BIA) · Gestión de riesgos · ITIL · Gestión de
-                            proveedores · CAPEX/OPEX · Scrum · Jira · Trello · IA generativa.</p>
-                    </div>
-                </div><a class="inline-link" href="#inicio"><span>↑</span></a>
-            </div>
-        </section>
-        <section class="testimonials ruled-section" id="recomendaciones">
-            <div class="section-title"><span>04</span>
-                <h2>Lo que dicen<br>quienes trabajaron conmigo</h2>
-            </div>
-            <div>
-                <div class="quotes">
-                    <blockquote class="quote">
-                        <p>«[…] Víctor Manuel Mena ha demostrado una sólida capacidad técnica, así como una destacada
-                            habilidad para adaptarse a los constantes cambios y desafíos propios del entorno
-                            tecnológico de la aviación. Su participación fue fundamental en la ejecución de proyectos
-                            estratégicos, la implementación de mejoras operativas y el aseguramiento de la continuidad
-                            de los servicios tecnológicos. […] Su gran experiencia acumulada, junto con su capacidad
-                            para resolver problemas, administrar prioridades y alcanzar objetivos, lo convierten por
-                            mucho en un profesional altamente valioso para cualquier organización.»</p>
-                        <cite><img class="quote-face" src="assets/rec/richard.jpg" alt="Richard González Martínez" width="132" height="132" loading="lazy" decoding="async"><b>Richard González Martínez</b><span>Director de Tecnología · Volaris Airlines ·
-                            México</span></cite>
-                    </blockquote>
-
-                    <blockquote class="quote">
-                        <p>«[…] Víctor destacó por su sólido criterio en infraestructura y operaciones TI, su capacidad
-                            para comprender rápidamente escenarios complejos y, sobre todo, por mantener siempre el
-                            foco en la continuidad operativa del negocio. En un entorno aeroportuario, donde
-                            conectividad, disponibilidad y tiempos de respuesta son críticos, demostró una excelente
-                            combinación de conocimiento técnico, organización y orientación a resultados. […] Lo
-                            recomiendo para posiciones de liderazgo en Tecnología, Infraestructura y Operaciones TI,
-                            especialmente en organizaciones que requieran gestionar entornos críticos, múltiples
-                            sedes, proveedores y altos estándares de disponibilidad y servicio.»</p>
-                        <cite><img class="quote-face" src="assets/rec/juan.jpg" alt="Juan Alberto Torres Chávez" width="132" height="132" loading="lazy" decoding="async"><b>Juan Alberto Torres Chávez</b><span>Gerente de Contrato de la Red MPLS Gigabit · Italtel · Perú</span></cite>
-                    </blockquote>
-
-                    <blockquote class="quote">
-                        <p>«[…] Es un profesional sumamente competente, con una aguda capacidad analítica y una habilidad
-                            extraordinaria para resolver problemas complejos. Su proactividad y profesionalismo lo
-                            convierten en un líder natural, siempre dispuesto a colaborar y a inspirar a su equipo.
-                            Recomiendo a Víctor sin ninguna reserva para cualquier posición en la que busquen un líder
-                            IT, ya que es un activo invaluable para cualquier organización.»</p>
-                        <cite><img class="quote-face" src="assets/rec/jonathan.jpg" alt="Jonathan Benavides" width="132" height="132" loading="lazy" decoding="async"><b>Jonathan Benavides</b><span>Dirección Comercial y Desarrollo de Mercados · Volaris
-                            Airlines · Costa Rica</span></cite>
-                    </blockquote>
-
-                    <blockquote class="quote">
-                        <p>«Víctor es un profesional Senior, con gran capacidad de resolución y manejo regional.
-                            Definitivamente sería una persona que contrataría para ser parte de mi equipo de
-                            trabajo: su conocimiento y su fortaleza para trabajar en equipo hacen la diferencia
-                            para lograr una gestión con excelencia. La empresa que logre reclutarlo contará con una
-                            persona que llegará a dar grandes aportes.»</p>
-                        <cite><img class="quote-face" src="assets/rec/marco.jpg" alt="Marco Bustos" width="132" height="132" loading="lazy" decoding="async"><b>Marco Bustos</b><span>Jefe de Aeropuerto Estación SJO · Aeropuerto Juan Santamaría · Costa Rica</span></cite>
-                    </blockquote>
-
-                    <blockquote class="quote">
-                        <p>«[…] Puedo destacar su profesionalismo y compromiso. Vic se caracteriza por su excelente
-                            disposición para el trabajo en equipo, alto sentido de responsabilidad, atención al detalle
-                            y una destacada capacidad para coordinar todas las actividades que se le presentan y
-                            plantean. […] Resalto su calidad humana, capacidad de comunicación y liderazgo […]
-                            cualidades que me generan confianza y que sé que aportará un valor significativo a
-                            cualquier equipo de trabajo al que pertenezca.»</p>
-                        <cite><img class="quote-face" src="assets/rec/sharon.jpg" alt="Sharon A. Pacheco Puello" width="132" height="132" loading="lazy" decoding="async"><b>Sharon A. Pacheco Puello</b><span>Coordinadora AVSEC SAM · Volaris Airlines · Colombia</span></cite>
-                    </blockquote>
-                </div>
-                <p class="quotes-note">Extractos; los corchetes […] señalan texto omitido. Estas y otras recomendaciones están completas en
-                    <a href="https://www.linkedin.com/in/victormenav/" target="_blank" rel="noreferrer">mi perfil de
-                    LinkedIn</a>.</p>
-                <a class="inline-link" href="#inicio"><span>↑</span></a>
-            </div>
-        </section>
-
-        <section class="contact" id="contacto">
-            <p class="kicker">05 · Conectemos</p>
-            <div class="contact-grid">
-                <h2 class="contact-headline">TECNOLOGÍA<span class="contact-accent"> + IA</span><br><span
-                        class="contact-accent">Negocio.</span></h2>
-                <div class="contact-info">
-                    <p class="contact-blurb">Contácteme para conversaciones sobre liderazgo de TI, infraestructura y
-                        operaciones regionales + IA generativa </p><a class="contact-row" id="emailContactLink"
-                        href="mailto:victorm@infolinkcr.com">victorm@infolinkcr.com <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="contact-row"
-                        href="https://www.linkedin.com/in/victormenav/" target="_blank"
-                        rel="noreferrer">linkedin.com/in/victormenav <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <div class="modal-overlay" id="contactModalOverlay" hidden>
-        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle"><button
-                class="modal-close" id="contactModalClose" type="button" aria-label="Cerrar formulario">✕</button>
-            <div class="modal-grid"><img class="modal-photo" src="assets/iphone-inbox.jpg"
-                    alt="iPhone con bandeja de entrada" loading="lazy">
-                <div class="modal-body">
-                    <h3 id="contactModalTitle">Escríbeme</h3>
-                    <form id="contactForm" action="https://formspree.io/f/mbgjyzok" method="POST">
-                           <input type="hidden" name="_subject" value="Nuevo contacto desde WEB — VictorMenaV"><label>Nombre<input
-                                type="text" name="name" required></label><label>Correo<input type="email" name="email"
-                                required></label><label>Mensaje<textarea name="message" rows="4"
-                                required></textarea></label><button type="submit">Enviar</button></form>
-                    <p class="modal-success" id="contactModalSuccess" hidden>¡Gracias! Te responderé pronto.</p>
-                </div>
-            </div>
-        </div>
+<section class="hero" id="heroSec" aria-labelledby="heroTitle">
+  <p class="hero-ghost" aria-hidden="true">VÍCTOR MENA</p>
+  <div class="hero-stage">
+    <video class="hero-video" id="heroVideo" src="assets/video-victor.mp4" muted playsinline preload="auto" poster="assets/poster.jpg" aria-label="Vídeo: Víctor se presenta"></video>
+  </div>
+  <div class="hero-copy">
+    <p class="hero-kicker fade-in" style="--i:0"><b>Víctor Mena Vega</b> · <span id="heroPlace">San José, Costa Rica</span></p>
+    <h1 class="h1" id="heroTitle"><span class="sr-only">Víctor Mena Vega, </span><span class="hero-line"><span style="--i:0" id="h1a">Líder TI</span></span><span class="hero-line"><span style="--i:1"><em id="h1b">regional.</em></span></span></h1>
+    <p class="hero-roles fade-in" style="--i:1" id="heroRoles">Resiliencia tecnológica · Infraestructura · Operaciones TI · IA generativa</p>
+    <div class="cta">
+      <a class="btn primary fade-in" style="--i:2" href="#proyectos" id="ctaWork"></a>
+      <span class="talkwrap fade-in" style="--i:3"><a class="btn" href="https://wa.me/50688202220?text=Vi%20tu%20perfil%20profesional%2C%20me%20gustar%C3%ADa%20que%20conversemos" target="_blank" rel="noopener" id="ctaTalk">Hablemos</a><a class="wa-bubble wa-badge" id="waFab" href="https://wa.me/50688202220?text=Vi%20tu%20perfil%20profesional%2C%20me%20gustar%C3%ADa%20que%20conversemos" target="_blank" rel="noopener" aria-label="Escribir a Víctor por WhatsApp" title="Escríbeme por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></span>
     </div>
-    <footer><span>© 2026 Víctor Mena Vega</span><a href="#inicio">VOLVER ARRIBA ↑</a></footer>
- <script>
-const portrait = document.querySelector('.portrait-toggle');
+  </div>
+  <div class="hero-side fade-in" style="--i:5">
+    <div class="vctrl">
+      <button type="button" class="pp" id="ppBtn" aria-pressed="false"></button>
+    </div>
+    <a class="hero-scroll" href="#sobre"><span id="scrollTxt">Bajar</span><i aria-hidden="true"></i></a>
+  </div>
+</section>
 
-portrait.addEventListener('click', () => {
-    const color = portrait.getAttribute('aria-pressed') === 'true';
+<section id="sobre">
+  <div class="shead"><span class="snum">01</span><h2 data-i18n="about_h">Sobre mí</h2></div>
+  <div class="about" id="aboutBody"></div>
+</section>
 
-    portrait.setAttribute('aria-pressed', String(!color));
+<section id="habilidades">
+  <div class="shead"><span class="snum">02</span><h2 data-i18n="skills_h">Habilidades</h2></div>
+  <p class="lead" id="skillsLead"></p>
+  <div class="legend" id="legend"></div>
+  <div class="skills">
+    <div class="ptable" id="ptable"></div>
+    <aside class="inspect" id="inspect" aria-live="polite"></aside>
+  </div>
+</section>
 
-    portrait.setAttribute(
-        'aria-label',
-        color ? 'Mostrar retrato a color' : 'Mostrar retrato en blanco y negro'
-    );
-});
+<section id="proyectos">
+  <div class="shead"><span class="snum">03</span><h2 data-i18n="work_h">Proyectos</h2></div>
+  <p class="lead" data-i18n="work_lead">Proyectos que lideré de principio a fin: el reto, cómo lo resolví y el resultado para el negocio.</p>
+  <div class="projects" id="projects"></div>
+</section>
 
-const emailLink = document.getElementById('emailContactLink');
-const overlay = document.getElementById('contactModalOverlay');
-const closeBtn = document.getElementById('contactModalClose');
-const cForm = document.getElementById('contactForm');
-const cSuccess = document.getElementById('contactModalSuccess');
-const cTitle = document.getElementById('contactModalTitle');
+<section id="trayectoria">
+  <div class="tl-head"><div class="tlh tlh-edu"><div class="shead"><span class="snum">04</span><h2>Formación</h2></div></div><div class="tlh tlh-exp"><div class="shead"><span class="snum">05</span><h2 data-i18n="exp_h">Experiencia</h2></div></div></div>
+  <div class="tl-mob">
+    <div class="shead"><span class="snum">04</span><h2>Trayectoria</h2></div>
+    <div class="tl-tabs" role="tablist" aria-label="Trayectoria">
+      <button type="button" role="tab" id="tabExp" data-show="exp" aria-selected="true" aria-controls="timeline">Experiencia</button>
+      <button type="button" role="tab" id="tabEdu" data-show="edu" aria-selected="false" aria-controls="timeline">Formación</button>
+    </div>
+  </div>
+  <ol class="tl show-exp" id="timeline"></ol>
+</section>
 
-function openModal(e) {
-    e.preventDefault();
+<section id="recomendaciones">
+  <div class="shead"><span class="snum">06</span><h2>Recomendaciones</h2></div>
+  <p class="lead">Lo que dicen quienes trabajaron conmigo.</p>
+  <div class="recs" id="recs">
+    <div class="rec-stage">
+      <blockquote class="rec on" id="rec0" role="tabpanel" aria-labelledby="rect0">
+        <p>«[…] Víctor Manuel Mena ha demostrado una sólida capacidad técnica, así como una destacada habilidad para adaptarse a los constantes cambios y desafíos propios del entorno tecnológico de la aviación. Su participación fue fundamental en la ejecución de proyectos estratégicos, la implementación de mejoras operativas y el aseguramiento de la continuidad de los servicios tecnológicos. […] Su gran experiencia acumulada, junto con su capacidad para resolver problemas, administrar prioridades y alcanzar objetivos, lo convierten por mucho en un profesional altamente valioso para cualquier organización.»</p>
+        <div class="rec-by"><img src="assets/rec/richard.jpg" alt="Richard González Martínez" width="56" height="56" loading="lazy" decoding="async"><span><b>Richard González Martínez</b><small>Director de Tecnología · Volaris Airlines · México</small></span></div>
+      </blockquote>
+      <blockquote class="rec" id="rec1" role="tabpanel" aria-labelledby="rect1">
+        <p>«[…] Víctor destacó por su sólido criterio en infraestructura y operaciones TI, su capacidad para comprender rápidamente escenarios complejos y, sobre todo, por mantener siempre el foco en la continuidad operativa del negocio. En un entorno aeroportuario, donde conectividad, disponibilidad y tiempos de respuesta son críticos, demostró una excelente combinación de conocimiento técnico, organización y orientación a resultados. […] Lo recomiendo para posiciones de liderazgo en Tecnología, Infraestructura y Operaciones TI, especialmente en organizaciones que requieran gestionar entornos críticos, múltiples sedes, proveedores y altos estándares de disponibilidad y servicio.»</p>
+        <div class="rec-by"><img src="assets/rec/juan.jpg" alt="Juan Alberto Torres Chávez" width="56" height="56" loading="lazy" decoding="async"><span><b>Juan Alberto Torres Chávez</b><small>Gerente de Contrato de la Red MPLS Gigabit · Italtel · Perú</small></span></div>
+      </blockquote>
+      <blockquote class="rec" id="rec2" role="tabpanel" aria-labelledby="rect2">
+        <p>«[…] Es un profesional sumamente competente, con una aguda capacidad analítica y una habilidad extraordinaria para resolver problemas complejos. Su proactividad y profesionalismo lo convierten en un líder natural, siempre dispuesto a colaborar y a inspirar a su equipo. Recomiendo a Víctor sin ninguna reserva para cualquier posición en la que busquen un líder IT, ya que es un activo invaluable para cualquier organización.»</p>
+        <div class="rec-by"><img src="assets/rec/jonathan.jpg" alt="Jonathan Benavides" width="56" height="56" loading="lazy" decoding="async"><span><b>Jonathan Benavides</b><small>Dirección Comercial y Desarrollo de Mercados · Volaris Airlines · Costa Rica</small></span></div>
+      </blockquote>
+      <blockquote class="rec" id="rec3" role="tabpanel" aria-labelledby="rect3">
+        <p>«Víctor es un profesional Senior, con gran capacidad de resolución y manejo regional. Definitivamente sería una persona que contrataría para ser parte de mi equipo de trabajo: su conocimiento y su fortaleza para trabajar en equipo hacen la diferencia para lograr una gestión con excelencia. La empresa que logre reclutarlo contará con una persona que llegará a dar grandes aportes.»</p>
+        <div class="rec-by"><img src="assets/rec/marco.jpg" alt="Marco Bustos" width="56" height="56" loading="lazy" decoding="async"><span><b>Marco Bustos</b><small>Jefe de Aeropuerto Estación SJO · Aeropuerto Juan Santamaría · Costa Rica</small></span></div>
+      </blockquote>
+      <blockquote class="rec" id="rec4" role="tabpanel" aria-labelledby="rect4">
+        <p>«[…] Puedo destacar su profesionalismo y compromiso. Vic se caracteriza por su excelente disposición para el trabajo en equipo, alto sentido de responsabilidad, atención al detalle y una destacada capacidad para coordinar todas las actividades que se le presentan y plantean. […] Resalto su calidad humana, capacidad de comunicación y liderazgo […] cualidades que me generan confianza y que sé que aportará un valor significativo a cualquier equipo de trabajo al que pertenezca.»</p>
+        <div class="rec-by"><img src="assets/rec/sharon.jpg" alt="Sharon A. Pacheco Puello" width="56" height="56" loading="lazy" decoding="async"><span><b>Sharon A. Pacheco Puello</b><small>Coordinadora AVSEC SAM · Volaris Airlines · Colombia</small></span></div>
+      </blockquote>
+    </div>
+    <div class="rec-tabs" role="tablist" aria-label="Recomendaciones">
+      <button type="button" class="rec-tab" role="tab" id="rect0" aria-controls="rec0" aria-selected="true"><img src="assets/rec/richard.jpg" alt="" width="40" height="40" loading="lazy"><span><b>Richard González Martínez</b><small>Volaris · México</small></span><i class="rec-prog" aria-hidden="true"></i></button>
+      <button type="button" class="rec-tab" role="tab" id="rect1" aria-controls="rec1" aria-selected="false"><img src="assets/rec/juan.jpg" alt="" width="40" height="40" loading="lazy"><span><b>Juan Alberto Torres Chávez</b><small>Italtel · Perú</small></span><i class="rec-prog" aria-hidden="true"></i></button>
+      <button type="button" class="rec-tab" role="tab" id="rect2" aria-controls="rec2" aria-selected="false"><img src="assets/rec/jonathan.jpg" alt="" width="40" height="40" loading="lazy"><span><b>Jonathan Benavides</b><small>Volaris · Costa Rica</small></span><i class="rec-prog" aria-hidden="true"></i></button>
+      <button type="button" class="rec-tab" role="tab" id="rect3" aria-controls="rec3" aria-selected="false"><img src="assets/rec/marco.jpg" alt="" width="40" height="40" loading="lazy"><span><b>Marco Bustos</b><small>Aeropuerto Juan Santamaría · Costa Rica</small></span><i class="rec-prog" aria-hidden="true"></i></button>
+      <button type="button" class="rec-tab" role="tab" id="rect4" aria-controls="rec4" aria-selected="false"><img src="assets/rec/sharon.jpg" alt="" width="40" height="40" loading="lazy"><span><b>Sharon A. Pacheco Puello</b><small>Volaris · Colombia</small></span><i class="rec-prog" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <p class="recs-note">Extractos; los corchetes […] señalan texto omitido. Estas y otras recomendaciones están completas en <a href="https://www.linkedin.com/in/victormenav/" target="_blank" rel="noopener">mi perfil de LinkedIn</a>.</p>
+</section>
 
-    overlay.hidden = false;
-    cTitle.textContent = 'Escríbeme';
-    cForm.hidden = false;
-    cSuccess.hidden = true;
-}
+<section id="certificaciones">
+  <div class="shead"><span class="snum">07</span><h2 data-i18n="certs_h">Aprendizaje continuo</h2></div>
+  <div class="certs-head">
+    <p class="lead" id="certsLead" style="margin:0"></p>
+    <div class="scroller-btns">
+      <button type="button" class="iconbtn" id="cPrev" aria-label="Anterior / Previous">←</button>
+      <button type="button" class="iconbtn" id="cNext" aria-label="Siguiente / Next">→</button>
+    </div>
+  </div>
+  <div class="certs" id="certs" tabindex="0" aria-label="Aprendizaje continuo y certificaciones"></div>
+  <div class="cdots" id="cdots"></div>
+</section>
 
-function closeModal() {
-    overlay.hidden = true;
-    cForm.hidden = false;
-    cSuccess.hidden = true;
-    cForm.reset();
-    cTitle.textContent = 'Escríbeme';
-}
+<section id="contacto" style="border-bottom:0">
+  <div class="shead"><span class="snum">08</span><h2 data-i18n="nav_contact">Contacto</h2></div>
+  <div class="marquee" aria-hidden="true"><div id="mq"></div></div>
+  <div class="contact">
+    <p class="lead" data-i18n="contact_lead">Liderazgo regional de tecnología. Si necesitas a alguien que mantenga tu operación funcionando y la lleve al siguiente nivel con IA, escríbeme o hablemos por WhatsApp.</p>
+    <div>
+      <div class="cline"><b>Email</b><span class="v" id="mail">victorm@infolinkcr.com</span><button type="button" data-copy="mail" data-i18n="copy">Copiar</button></div>
+      <div class="cline"><b>WhatsApp</b><a href="https://wa.me/50688202220?text=Vi%20tu%20perfil%20profesional%2C%20me%20gustar%C3%ADa%20que%20conversemos" target="_blank" rel="noopener">+506 8820 2220</a></div>
+      <div class="cline"><b>LinkedIn</b><a href="https://www.linkedin.com/in/victormenav" target="_blank" rel="noopener">victormenav</a></div>
+      <div class="cline"><b>CV</b><a href="assets/cv-victor-mena-vega.pdf" target="_blank" rel="noopener" data-i18n="cv">Descargar PDF ↓</a></div>
+    </div>
+  </div>
+</section>
 
-emailLink.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
+<footer><span>© 2026 Víctor Mena Vega</span><a href="#inicio" data-i18n="top">Volver arriba ↑</a></footer>
+</main>
 
-overlay.addEventListener('click', e => {
-    if (e.target === overlay) {
-        closeModal();
-    }
-});
-
-cForm.addEventListener('submit', async e => {
-    e.preventDefault();
-
-    const submitButton = cForm.querySelector('button[type="submit"]');
-
-    submitButton.disabled = true;
-    submitButton.textContent = 'Enviando...';
-
-    try {
-        const res = await fetch(cForm.action, {
-            method: 'POST',
-            body: new FormData(cForm),
-            headers: {
-                Accept: 'application/json'
-            }
-        });
-
-        if (res.ok) {
-            cForm.reset();
-            cTitle.textContent = 'Enviado';
-            cForm.hidden = true;
-            cSuccess.hidden = false;
-        } else {
-            submitButton.disabled = false;
-            submitButton.textContent = 'Enviar';
-
-            alert('Hubo un problema al enviar. Escríbeme directo a victorm@infolinkcr.com');
-        }
-
-    } catch (err) {
-        submitButton.disabled = false;
-        submitButton.textContent = 'Enviar';
-
-        alert('Hubo un problema al enviar. Escríbeme directo a victorm@infolinkcr.com');
-    }
-});
-</script>
-
-
+<noscript>
+  <div class="wrap" style="padding:24px 0">
+    <p>Víctor Mena Vega es especialista en infraestructura y operaciones de TI en San José, Costa Rica, con más de 30 años de experiencia. Lideró la habilitación tecnológica de Volaris en 7 países de América: Costa Rica, Guatemala, El Salvador, Honduras, Perú, México y EE. UU. (2016–2026), fue IT Manager de Hotel Presidente (2005–2016) y Gerente de Cómputo en Corporación Surá y Grupo Hotelero Casa Conde (1997–2005). Máster en IA para la Gestión Empresarial (EUDE), Scrum Fundamentals Certified e incorporado al CPIC.</p>
+    <p>Contacto: <a href="mailto:victorm@infolinkcr.com">victorm@infolinkcr.com</a> · <a href="https://www.linkedin.com/in/victormenav">LinkedIn</a></p>
+  </div>
+</noscript>
+<script src="map-americas.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
