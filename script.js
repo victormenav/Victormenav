@@ -223,8 +223,11 @@ function renderTimeline(){
     [T('IA generativa aplicada a la gestión.','Generative AI applied to management.'),T('Scrum Fundamentals Certified (SFC).','Scrum Fundamentals Certified (SFC).')],true,false],
    [T('Hoy','Today'),X,'',T('Mi siguiente paso','My next step'),'',
     [T('Busco un equipo donde aportar desde el primer día.','Looking for a team where I can contribute from day one.')],true,true]];
+  const LOGOS=[[/Volaris/,'volaris.png','Volaris',40],[/Hotel Presidente/,'hotel-presidente.png','Hotel Presidente',71],[/Casa Conde/,'casa-conde.png','Grupo Hotelero Casa Conde',49],
+   [/Castro Carazo/,'umca.png','Universidad Metropolitana Castro Carazo',42],[/Universidad de Costa Rica/,'ucr.png','Universidad de Costa Rica',38],[/INCAE/,'incae.png','INCAE Business School',42],[/EUDE/,'eude.png','EUDE Business School',82]];
+  const tlLogo=org=>{const l=LOGOS.find(x=>x[0].test(org));return l?`<img class="tl-logo${l[3]>60?' wide':''}" src="assets/${l[1]}" alt="${l[2]}" width="${l[3]}" height="40" loading="lazy" style="width:${l[3]}px">`:''};
   EXP.reverse(); /* más reciente arriba; el spine va primero para que Experiencia quede a la derecha y Formación a la izquierda */
-  document.getElementById('timeline').innerHTML='<span class="spine" aria-hidden="true"></span>'+EXP.map(it=>`<li data-year="${it[0]}" class="${it[1]===F?'edu':'exp'}${it[6]?' key':''}"><div class="entry">${/Volaris/.test(it[4])?'<img class="tl-logo" src="assets/volaris.png" alt="Volaris" width="40" height="40" loading="lazy">':/Hotel Presidente/.test(it[4])?'<img class="tl-logo wide" src="assets/hotel-presidente.png" alt="Hotel Presidente" width="71" height="40" loading="lazy">':/Casa Conde/.test(it[4])?'<img class="tl-logo" src="assets/casa-conde.png" alt="Grupo Hotelero Casa Conde" width="49" height="40" loading="lazy" style="width:49px">':''}
+  document.getElementById('timeline').innerHTML='<span class="spine" aria-hidden="true"></span>'+EXP.map(it=>`<li data-year="${it[0]}" class="${it[1]===F?'edu':'exp'}${it[6]?' key':''}"><div class="entry">${tlLogo(it[4])}
      ${it[2]?`<span class="kind" style="--c:${it[1][0]}">${it[1][1]}</span><span class="dates">${it[2]}</span>`:''}
      <h3>${it[3]}</h3>${it[4]?`<div class="org">${it[4]}</div>`:''}<ul${it[7]?' class="radar"':''}>${it[5].map(b=>`<li>${b}</li>`).join('')}</ul>
      ${it[7]?`<a class="cta-link" href="#contacto">${T('Hablemos ↗','Let\'s talk ↗')}</a>`:''}</div></li>`).join('');
