@@ -555,5 +555,5 @@ footer a[href="#inicio"]{color:#c8102e}
 /* v56: en móvil el botón de play va abajo a la izquierda del video */
 @media (max-width:900px){
   .hero-copy{order:2}
-  .hero-side{position:relative;right:auto;bottom:auto;z-index:2;align-self:flex-start;justify-content:flex-start;margin:-64px 0 16px 12px}
+  .hero-side{position:relative;right:auto;bottom:auto;z-index:2;align-self:flex-start;justify-content:flex-start;margin:-64px 0 16px 12px;-webkit-transform:translateZ(0);transform:translateZ(0)}
 }
