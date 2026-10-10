@@ -560,3 +560,15 @@ footer a[href="#inicio"]{color:#c8102e}
 /* v59: botón de play en rojo */
 .pp{background:#c8102e;color:#fff}
 .pp::after{box-shadow:0 0 0 1.5px #c8102e}
+/* v60: logos también en Formación; el título deja espacio según el ancho del logo */
+.tl .entry:has(.tl-logo.wide) h3{padding-right:94px}
+/* v61: ficha "Mi siguiente paso" en amarillo */
+.tl .entry:has(.cta-link){background:#f2b705;border-color:#d9a404}
+.tl .entry:has(.cta-link) h3,.tl .entry:has(.cta-link) li{color:#0b0b0b}
+.tl .entry:has(.cta-link) .cta-link{color:#164a96;text-decoration-color:#164a96}
+.tl .entry:has(.cta-link) li u{text-decoration-thickness:2px;text-underline-offset:3px}
+/* v62: EUDE y UMCA con esquinas rectas */
+.tl .tl-logo[src$="eude.png"],.tl .tl-logo[src$="umca.png"]{border-radius:0}
+/* v63: punto con radar de "Mi siguiente paso" en rojo */
+.tl ul.radar li::before{background:#c8102e;box-shadow:0 0 6px rgba(200,16,46,.6)}
+.tl ul.radar li::after{border-color:#c8102e}

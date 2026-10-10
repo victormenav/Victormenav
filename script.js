@@ -222,7 +222,7 @@ function renderTimeline(){
    ["2026",F,"2026",T('Máster en IA para la Gestión Empresarial','Master\'s in AI for Business Management'),"EUDE Business School · España",
     [T('IA generativa aplicada a la gestión.','Generative AI applied to management.'),T('Scrum Fundamentals Certified (SFC).','Scrum Fundamentals Certified (SFC).')],true,false],
    [T('Hoy','Today'),X,'',T('Mi siguiente paso','My next step'),'',
-    [T('Busco un equipo donde aportar desde el primer día.','Looking for a team where I can contribute from day one.')],true,true]];
+    [T('En busca de un nuevo <u>RETO</u> profesional.','Looking for a new professional <u>CHALLENGE</u>.')],true,true]];
   const LOGOS=[[/Volaris/,'volaris.png','Volaris',40],[/Hotel Presidente/,'hotel-presidente.png','Hotel Presidente',71],[/Casa Conde/,'casa-conde.png','Grupo Hotelero Casa Conde',49],
    [/Castro Carazo/,'umca.png','Universidad Metropolitana Castro Carazo',42],[/Universidad de Costa Rica/,'ucr.png','Universidad de Costa Rica',38],[/INCAE/,'incae.png','INCAE Business School',42],[/EUDE/,'eude.png','EUDE Business School',82]];
   const tlLogo=org=>{const l=LOGOS.find(x=>x[0].test(org));return l?`<img class="tl-logo${l[3]>60?' wide':''}" src="assets/${l[1]}" alt="${l[2]}" width="${l[3]}" height="40" loading="lazy" style="width:${l[3]}px">`:''};
