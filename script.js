@@ -404,7 +404,7 @@ function renderCerts(){
   /* [seal, issuer, title es, title en, text es, text en, year] */
   const C=[
    ["SFC","SCRUMstudy · VMEdu","Scrum Fundamentals Certified","Scrum Fundamentals Certified","Fundamentos de Scrum y gestión ágil de proyectos.","Scrum fundamentals and agile project management.","2026"],
-   ["AI",T("IA generativa","Generative AI"),"Claude","Claude","Cursos prácticos de IA generativa para el trabajo diario.","Hands-on generative AI courses for everyday work.","2026",["AI Fluency: Framework & Foundations","Claude Code","Claude 101"]],
+   ["AI",T("IA generativa","Generative AI"),"Claude","Claude","Cursos prácticos de IA generativa para el trabajo diario.","Hands-on generative AI courses for everyday work.","2026",["AI Fluency: Framework & Foundations","Claude Code 101","Claude 101"]],
    ["GPT",T("IA generativa","Generative AI"),"ChatGPT","ChatGPT","Uso práctico de ChatGPT en el trabajo diario.","Hands-on use of ChatGPT for everyday work.","2026",["Applied AI Foundations"]],
    ["G","Google Cloud","Google","Google","Formación en computación en la nube.","Cloud computing training.","2026",["Cloud Computing Foundations"]],
    ["UN","UNESCO · LG AI Research","Global MOOC on the Ethics of AI","Global MOOC on the Ethics of AI","Curso global sobre la ética de la inteligencia artificial.","Global course on the ethics of artificial intelligence.","2026"]];
