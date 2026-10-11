@@ -221,16 +221,19 @@ function renderTimeline(){
     [T('Liderazgo TI en 7 países, 180+ usuarios y estaciones.','IT leadership in 7 countries, 180+ users and stations.'),T('Certificación ante la DGAC de Costa Rica.','Certification with Costa Rica\'s DGAC.'),T('Migración al aeropuerto Jorge Chávez de Lima.','Migration to Lima\'s Jorge Chávez airport.')],true],
    ["2026",F,"2026",T('Máster en IA para la Gestión Empresarial','Master\'s in AI for Business Management'),"EUDE Business School · España",
     [T('IA generativa aplicada a la gestión.','Generative AI applied to management.'),T('Scrum Fundamentals Certified (SFC).','Scrum Fundamentals Certified (SFC).')],true,false],
+   [T('Hoy','Today'),F,'',T('Actualmente cursando','Currently studying'),'',
+    [T('Máster en IA para la Gestión Empresarial - España','Master\'s in AI for Business Management - Spain'),'Cloud Computing Foundations - Google',T('Formación en Claude y ChatGPT','Training in Claude and ChatGPT'),T('Inglés','English')],true,false],
    [T('Hoy','Today'),X,'',T('Mi siguiente paso','My next step'),'',
     [T('En busca de un nuevo <u>RETO</u> profesional.','Looking for a new professional <u>CHALLENGE</u>.')],true,true]];
   const LOGOS=[[/Volaris/,'volaris.png','Volaris',40],[/Hotel Presidente/,'hotel-presidente.png','Hotel Presidente',71],[/Casa Conde/,'casa-conde.png','Grupo Hotelero Casa Conde',49],
    [/Castro Carazo/,'umca.png','Universidad Metropolitana Castro Carazo',42],[/Universidad de Costa Rica/,'ucr.png','Universidad de Costa Rica',38],[/INCAE/,'incae.png','INCAE Business School',42],[/EUDE/,'eude.png','EUDE Business School',82]];
   const tlLogo=org=>{const l=LOGOS.find(x=>x[0].test(org));return l?`<img class="tl-logo${l[3]>60?' wide':''}" src="assets/${l[1]}" alt="${l[2]}" width="${l[3]}" height="40" loading="lazy" style="width:${l[3]}px">`:''};
   EXP.reverse(); /* más reciente arriba; el spine va primero para que Experiencia quede a la derecha y Formación a la izquierda */
-  document.getElementById('timeline').innerHTML='<span class="spine" aria-hidden="true"></span>'+EXP.map(it=>`<li data-year="${it[0]}" class="${it[1]===F?'edu':'exp'}${it[6]?' key':''}"><div class="entry">${tlLogo(it[4])}
+  document.getElementById('timeline').innerHTML='<span class="spine" aria-hidden="true"></span>'+EXP.map(it=>`<li data-year="${it[0]}" class="${it[1]===F?'edu':'exp'}${it[6]?' key':''}${it[2]===''?' hoy':''}"><div class="entry">${tlLogo(it[4])}
      ${it[2]?`<span class="kind" style="--c:${it[1][0]}">${it[1][1]}</span><span class="dates">${it[2]}</span>`:''}
      <h3>${it[3]}</h3>${it[4]?`<div class="org">${it[4]}</div>`:''}<ul${it[7]?' class="radar"':''}>${it[5].map(b=>`<li>${b}</li>`).join('')}</ul>
      ${it[7]?`<a class="cta-link" href="#contacto">${T('Hablemos ↗','Let\'s talk ↗')}</a>`:''}</div></li>`).join('');
+  alignHoy();
   updateSpine();
 }
 function updateSpine(){
@@ -240,6 +243,9 @@ function updateSpine(){
   tl.style.setProperty('--p',(matchMedia('(prefers-reduced-motion: reduce)').matches?100:Math.round(p*100))+'%');
 }
 addEventListener('scroll',updateSpine,{passive:true});addEventListener('resize',updateSpine);
+/* escritorio: "Actualmente cursando" (Formación) a la misma altura que "Mi siguiente paso" (Experiencia) */
+function alignHoy(){const tl=document.getElementById('timeline');if(!tl)return;const e=tl.querySelector('li.hoy.edu'),x=tl.querySelector('li.hoy.exp');if(!e||!x)return;e.style.marginTop=matchMedia('(min-width:901px)').matches?(-x.offsetHeight)+'px':''}
+addEventListener('resize',alignHoy);addEventListener('load',alignHoy);
 /* móvil y tablet: pestañas Experiencia / Formación */
 document.querySelectorAll('.tl-tabs [role=tab]').forEach(btn=>btn.addEventListener('click',()=>{
   const tl=document.getElementById('timeline');
@@ -366,25 +372,14 @@ function renderAbout(){
            <div class="photo-wrap"><img class="photo" src="assets/badge-photo.jpg" alt="Víctor Mena Vega, especialista en infraestructura y operaciones de TI en San José, Costa Rica" draggable="false"><svg class="otw-ring" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="otwG" gradientUnits="userSpaceOnUse" x1="6" y1="30" x2="60" y2="96"><stop offset="0" stop-color="#2f7d32" stop-opacity="0"/><stop offset=".3" stop-color="#2f7d32"/><stop offset="1" stop-color="#2f7d32"/></linearGradient><path id="otwArc" d="M8.65 34.95A44 44 0 0 0 72 88.1"/></defs><use href="#otwArc" fill="none" stroke="url(#otwG)" stroke-width="13" stroke-linecap="round"/><text dy="2.6"><textPath href="#otwArc" startOffset="55%" text-anchor="middle">#OPENTOWORK</textPath></text></svg></div>
            <div class="idbody">
              <strong>Víctor Mena Vega</strong>
-             <span class="role">${T('Infraestructura · Operaciones TI · IA','Infrastructure · IT Operations · AI')}</span>
              <span class="otw" title="Colegio Profesional de Informática y Computación">${T('Incorporado al CPIC','CPIC member')}</span>
-             <div class="idrow"><div>${T('Base','Based in')}<b>San José · CR</b></div><div>${T('Experiencia','Experience')}<b>${T('30+ años','30+ years')}</b></div></div>
+             <div class="idmode">${ICON.mode}<div>${T('Híbrido / Remoto / Presencial','Hybrid / Remote / On-site')}<small>${T('Modalidad de trabajo','Work arrangement')}</small></div></div>
+             <div class="idrow"><div class="idi">${ICON.pin}<b>San José, Costa Rica</b></div><div class="idi">${ICON.lang}<div><span class="lng">${T('Inglés B1<br>Técnico<br><b>(en curso)</b>','English B1<br>Technical<br><b>(in progress)</b>')}</span></div></div></div>
            </div>
          </div>
        </div>
      </div>
      <span class="hint">${T('Arrastra la tarjeta','Drag the badge')}</span>
-     <div class="sheet" style="margin-top:14px">
-       <h3>${T('Ficha','Profile')}</h3>
-       <div class="srow">${ICON.pin}<div>San José, Costa Rica<small>${T('Liderazgo regional de tecnología','Regional technology leadership')}</small></div></div>
-       <div class="srow">${ICON.work}<div>${T('Infraestructura y operaciones TI','IT infrastructure and operations')}<small>${T('Corporativo, hotelería y aviación','Corporate, hospitality and aviation')}</small></div></div>
-       <div class="srow">${ICON.mode}<div>${T('Híbrido / Remoto / Presencial','Hybrid / Remote / On-site')}<small>${T('Modalidad de trabajo','Work arrangement')}</small></div></div>
-       <div class="srow">${ICON.lang}<div>${T('Inglés B1 - Técnico (en curso)','English B1 - Technical (in progress)')}<small>${T('Idiomas','Languages')}</small></div></div>
-       <div class="now"><span class="improving"><span class="pulse"></span>${T('Actualmente cursando','Currently studying')}</span>
-         <div><i></i>${T('Máster en IA para la Gestión Empresarial - España','Master\'s in AI for Business Management - Spain')}</div>
-         <div><i></i>Cloud Computing Foundations - Google</div>
-         <div><i></i>${T('Formación en Claude y ChatGPT','Training in Claude and ChatGPT')}</div></div>
-     </div>
    </div>`;
   const tabs=[...document.querySelectorAll('.facets [role="tab"]')];
   tabs.forEach((b,i)=>{b.addEventListener('click',()=>showFacet(i));b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;showFacet(n);tabs[n].focus()}})});

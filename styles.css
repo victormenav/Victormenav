@@ -572,3 +572,21 @@ footer a[href="#inicio"]{color:#c8102e}
 /* v63: punto con radar de "Mi siguiente paso" en rojo */
 .tl ul.radar li::before{background:#c8102e;box-shadow:0 0 6px rgba(200,16,46,.6)}
 .tl ul.radar li::after{border-color:#c8102e}
+/* v68: datos de la Ficha dentro del carnet */
+.idcard{aspect-ratio:auto;min-height:350px}
+.idmode{display:grid;grid-template-columns:16px minmax(0,1fr);gap:6px;align-items:start;font-size:12px;line-height:1.3;margin:6px auto 2px;text-align:left}
+.idmode small{display:block;color:var(--muted);font-size:10.5px}
+.idbody svg{width:15px;height:15px;stroke:var(--muted);fill:none;stroke-width:1.8;margin-top:1px}
+.idrow .idi{display:grid;grid-template-columns:15px minmax(0,1fr);gap:5px;align-items:start;line-height:1.3}
+.idrow .idi b{font-size:11px}
+/* v69: "Actualmente cursando" como ficha blanca (solo "Mi siguiente paso" es amarilla) en Formación, a la altura de "Hoy" */
+.tl > li.hoy.exp .entry{background:#f2b705;border-color:#d9a404}
+.tl > li.hoy.exp .entry h3,.tl > li.hoy.exp .entry li{color:#0b0b0b}
+.tl > li.hoy.exp .entry .cta-link{color:#164a96;text-decoration-color:#164a96}
+.tl > li.hoy.edu .entry ul{text-align:left}
+@media (min-width:901px){.tl > li.hoy.edu::before{display:none}}
+/* v70: idioma en tres líneas, "(en curso)" en negrita */
+.idrow .idi .lng{display:block;color:var(--ink);font-weight:400}
+.idrow .idi .lng b{display:inline;font-weight:700}
+/* v73: nombre centrado en el carnet */
+.idbody strong{text-align:center;align-self:stretch}
