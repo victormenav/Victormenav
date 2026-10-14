@@ -461,8 +461,8 @@ const IC={replay:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7
  on:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
  off:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9l5 6M21 9l-5 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'};
 const hv=document.getElementById('heroVideo'),ppBtn=document.getElementById('ppBtn');
-let userPaused=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let wantSound=false; /* sin botón de sonido: el video va siempre en silencio */
+let userPaused=true; /* prueba: no arranca solo; espera clic o play */
+let wantSound=true;window.setSnd=function(v){wantSound=v}; /* sin botón de sonido: el video va siempre en silencio */
 function syncVideoUI(){
   const playing=!hv.paused;
   ppBtn.innerHTML=playing?IC.pause:IC.play;ppBtn.setAttribute('aria-label',playing?T('Pausar vídeo','Pause video'):T('Reproducir vídeo','Play video'));ppBtn.setAttribute('aria-pressed',String(!playing));
@@ -480,8 +480,6 @@ function playVideo(){
 }
 ppBtn.addEventListener('click',e=>{e.stopPropagation();if(hv.paused){userPaused=false;if(hv.ended)hv.currentTime=0;hv.muted=!wantSound;hv.play().catch(()=>{hv.muted=true;hv.play().catch(()=>{})})}else{userPaused=true;hv.pause()}});
 hv.addEventListener('click',()=>ppBtn.click());
-/* en computadora: pasar el mouse sobre la persona la hace saludar de nuevo (si el video no se está reproduciendo) */
-if(matchMedia('(hover: hover) and (pointer: fine)').matches)hv.addEventListener('mouseenter',()=>{if(hv.paused)ppBtn.click()});
 ['play','pause','ended','volumechange'].forEach(e=>hv.addEventListener(e,syncVideoUI));
 if('IntersectionObserver' in window){new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){if(!userPaused)playVideo()}else if(!hv.paused){hv.pause()}})},{threshold:.25}).observe(document.getElementById('heroSec'))}
 else if(!userPaused)playVideo();
